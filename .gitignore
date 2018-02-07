@@ -1,0 +1,38 @@
+# Maven
+target/
+*.ser
+*.ec
+
+# IntelliJ Idea
+.idea/
+out/
+*.ipr
+*.iws
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# OS X
+.DS_Store
+
+
+# Webui
+logs
+project/project
+project/target
+project/.sbetserver*
+*/target
+tmp
+*/bin/
+tmp-data/clusterized/*
+tmp-data/pdml/*
+tmp-data/profile/*
+tmp-data/tmpdir/*
+.cache*
+
+# Docker apache logs
+docker/var/log/apache2/*

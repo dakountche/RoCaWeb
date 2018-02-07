@@ -1,0 +1,143 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+
+%opening
+\title{$\khi^2 goddness of fit test for intrusion detection$}
+
+
+\begin{document}
+
+\maketitle
+
+
+
+\section{Introduction}
+The $\khi^2$ test can be use to assess the independence of two random variables or to test the hypothesis
+that an individual variable is drown from a distribution. 
+In the case of intrusion detection, we are going to use the second case. 
+
+
+\section{Definitons}
+Given $v$ independent variables, each normally distributed with mean $u_i$ and $\sigma^2_i$, then :
+\begin{equation}
+ \khi^2 = \sum^{v}_{i=1} (\frac{(x_i - \mu_i)^2}{\sigma^{2}_{i}}
+\end{equation}
+
+Ideally, given the random fluctuations of the values of $\xi$ about their mean value $\mu_i$, each term in the sim will be of order of unity, 
+hence if $u_i$ and $\sigma_i$ are choosen correctly, the $\chi^2$ value will be approximatlly eaqual to $v$.
+
+If this is the case, it can be concluded that $u_i$ and $\sigma_i$ describe well the data, the we can not reject the hypothesis. 
+
+
+If $\khi^2$ is greater than v, and we have correctly estimated the value of $\sigma_i$, we may possibly conclude that our data are not well described by our hypothesized set
+of the $u_i$. 
+
+This is the general idea of $\khi^2$ test. 
+
+
+\section{The $khi^2$ distribution}
+
+The distribution of the random variable $\khi^2$ is :
+\begin{equation}
+ f(\khi^2) = \frac{1}{2^{v/2} \Gamma (v/2)} e^{-\khi^2/2}(\khi^2)^{(v/2)^{-1}}
+\end{equation}
+
+where: 
+\begin{itemize}
+ \item $v$ is the degree of freedom
+ \item $\Gamma(p)$ is the gamma function. 
+ 
+\end{itemize}
+
+The gamma function is defined by : 
+\begin{equation}
+  \Gamma (p +1)  \equiv \int^{\infty}_{0} x^p e^{-x} dx
+ \end{equation}
+ 
+ 
+\begin{itemize}
+ \item It is a generalization of the factorial function to non-integer value of $p$;
+ \item if $p$ is an, $\Gamme(p+1) = p!$
+ \item in general, $\Gamma(p+1) = p\Gamma(p)$
+ \item $Gamma(1/2) = \sqrt{\pi}$
+\end{itemize}
+
+
+\begin{figure}
+ \begin{tikzpicture}
+  \begin{axis}[%
+    xlabel = $x$,
+    ylabel = {Probability density},
+    samples = 200,
+    restrict y to domain = 0:0.5,
+    domain = 0.01:15]
+    \foreach \k in {1,...,8} {%
+      \addplot+[mark={}] gnuplot[raw gnuplot] {%
+        isint(x) = (int(x)==x);
+        log2 = 0.693147180559945;
+        chisq(x,k)=k<=0||!isint(k)?1/0:x<=0?0.0:exp((0.5*k-1.0)*log(x)-0.5*x-lgamma(0.5*k)-k*0.5*log2);
+        set xrange [1.00000e-5:15.0000];
+        set yrange [0.00000:0.500000];
+        samples=200;
+        plot chisq(x,\k)};
+    \addlegendentryexpanded{$k = \k$}}
+  \end{axis}
+\end{tikzpicture}
+\caption{Illustration of the $\khi^2$ distribution}
+\end{figure}
+
+The $\khi^2$ distribution is skewed for small values and tend toward the  normal distribution. 
+
+
+\section{Using the $\khi^2$ for statistical test}
+
+\begin{itemize}
+ \item Suppose we have $N$ experimental measured quantities $x_i$,
+ \item we want to known whether ther are well described by some set of hypothesized values $\mu_i$
+ \item Determine the value of $\khi^2$ as described in the equation. In determining the sum, we must use estimates for the $\sigma_i$
+  that are independently obtained for each $\sigma_i$. 
+  
+  
+  We can generalise from above discussion, to say that we expect a single measured value of $\khi^2$ will have a aprobaility $\alpha$ of being greater
+  than $\khi^2_{v,\alpha}$ defined by : 
+  \begin{equation}
+   \int^{}_{\infty} f(\khi^2) d\khi^2 = \alpha
+  \end{equation}
+
+\end{itemize}
+
+ \begin{figure}
+  
+  \caption{Illustrate here the equation of $\khi^2_{v,\alpha}$. }
+ \end{figure}
+
+The following steps Illustrate how to use the test : 
+\begin{enumerate}
+ \item We hypothesize that our data are approprially described by our chosen function, or set of $\mu_i$. This is the hypothesis 
+ we are going to test. 
+ 
+ \item From our data sample, we calculate a sample value of $\khi^2$, along with $v$, and so determine $\khi^2/v$ (the normalized chi-squarre, or chi-square per degree of freedom) for our sample. 
+ 
+ \item we choose a value of the significance level $\alpha$ (0.05 is a common value) anf from an appropriate table or graph, determine the corresponding
+ value of $\khi^2_{v,\alpha}/v$. We then compare this value with our sample value of $khi^2/v$
+ 
+ \item If we find that $\khi^2/v > \khi^2_{v,\alpha}$, we may conclude that either (i) the model represented by the $\mu_i$ is a valid one but thant a staistically
+ improbable excursion of $\khi^2$ has occured, or (ii) that our model is so poorly choosen that an unacceptably large value of $\khi^2$ has resulted.
+ 
+ (i) will happen with a probability $\alpha$, so if we are satisfied that (i) and (ii) are the only possibilities, (ii) will happen with a probability of $1 - \alpha$.
+ 
+ Thus, if we find that $\khi^2/v > \khi^2_{v,\alpha}$, we are $100 \times (1 - \alpha)$ per cent confident in $rejecting$ our model.
+ Note that this reasoning breaks down if there is a possibily (iii), for example if our data are not normally distributed. The theory of the chi-squarre test
+ relies on the assumption that chi-square is the sum of the squares of random normal deviates, that is, that each $x_i$ is normally distributed about its mean value. 
+ 
+However for some experiments, there may be occasional non-normal data points that are too far from the mean to be real. It is appropriate to discard data points
+that are clearly outliers. 
+
+
+\item If we find that $\khi^2$ is too small, that is, if 
+ 
+\end{enumerate}
+
+ 
+\end{document} 

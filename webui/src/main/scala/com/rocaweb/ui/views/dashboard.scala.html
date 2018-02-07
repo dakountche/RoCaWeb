@@ -1,0 +1,38 @@
+@(elkurl: String,kport: String,kdashboard: String) @main("Dashboard") {
+
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="header">
+						<h4 class="title">Kibana</h4>
+						<p class="category">1 Hour performance</p>
+					</div>
+					<div class="content">
+								<div class="embed-responsive embed-responsive-16by9">
+    							<iframe src="http://@elkurl:@kport/@kdashboard" height="600" width="800"></iframe>
+    							</div>
+							
+						<!--  <div id="chartHours" class="ct-chart">
+						
+						</div>-->
+						<div class="footer">
+							<div class="legend"></div>
+							<hr>
+							<div class="stats">
+								<i class="fa fa-history"></i> Updated 3 minutes ago
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Javascript Function -->
+<script type="text/javascript"
+	src='@routes.Assets.at("js/rocaweb/dashboard.js")'></script>
+
+}

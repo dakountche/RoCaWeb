@@ -1,0 +1,16 @@
+{
+   "com.rocaweb.learning.algorithms.grammatical.Trie":   {
+	"learningFileName": "fileName",
+	"clustering": false,
+	"decode": false,
+	"casse": false,
+	"clean": false,
+	"base": "utf-8",
+	"clusterNumber": 0,
+	"ruleType": "ModSecurity",
+	"learningPath": "learningDir",
+	"configFileName": "conf/algorithms-config.xml",
+	"mahout":""
+
+}
+}

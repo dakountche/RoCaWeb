@@ -1,0 +1,17 @@
+{
+	"com.rocaweb.learning.algorithms.typing.RegexLearner": 
+	{
+		"bounded": false,
+		"learningFileName": "ftp://ftp.lip6.fr/pub/linux/sunsite/apps/assessment/aleader-20030726.iso",
+		"clustering": false,
+		"decode": false,
+		"casse": true,
+		"clean": true,
+		"base": "utf-8",
+		"clusterNumber": 0,
+		"ruleType": "ModSecurity",
+		"learningPath": "ftp://ftp.lip6.fr/pub/",
+		"configFileName": "conf/algorithms-config.xml",
+		"mahout":""
+	}
+}

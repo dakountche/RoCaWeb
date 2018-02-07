@@ -1,0 +1,5 @@
+# Depends: unique_id
+LoadFile libxml2.so.2
+# Load Lua
+LoadFile /opt/torch/build/exe/luajit-rocks/luajit-2.1/libluajit.so
+LoadModule security2_module /usr/lib/apache2/modules/mod_security2.so

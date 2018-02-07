@@ -1,0 +1,127 @@
+{
+        "id": "AMAA",
+        "type": "object",
+        "properties": {
+          "NeedlemanWunsch": {
+            "id": "NeedlemanWunsch",
+            "type": "object",
+            "properties": {
+              "penalty": {
+                "id": "penalty",
+                "title":"penalty",
+                "type": "integer"
+              },
+              "mismatch": {
+                "id": "mismatch",
+                "title":"Mismatch",
+                "type": "integer"
+              },
+              "match": {
+                "id": "/NeedlemanWunsch/match",
+                "title":"Match",
+                "type": "integer"
+              },
+              "alphabet": {
+                "id": "alphabet",
+                "type": "array",
+                "title":"Alphabet",
+                "enum": ["-"]
+              },
+              "gapCharacter": {
+                "id": "/NeedlemanWunsch/gapCharacter",
+                "title":"Gap Character",
+                "type": "string"
+              },
+              "possibleGapCharacters": {
+                "id": "possibleGapCharacters",
+                "title":"Possible Gaps",
+                "type": "array",
+                "items": [
+                  {
+                    "id": "/NeedlemanWunsch/possibleGapCharacters/0",
+                    "type": "string"
+                  },
+                  {
+                    "id": "/NeedlemanWunsch/possibleGapCharacters/1",
+                    "type": "string"
+                  },
+                  {
+                    "id": "/NeedlemanWunsch/possibleGapCharacters/2",
+                    "type": "string"
+                  },
+                  {
+                    "id": "/NeedlemanWunsch/possibleGapCharacters/3",
+                    "type": "string"
+                  }
+                ]
+              },
+              "functionName": {
+                "id": "functionName",
+                "title":"Function name",
+                "type": "string"
+              }
+            }
+          },
+          "isLibraryAligned": {
+            "id": "isLibraryAligned",
+            "title":"Align library",
+            "type": "boolean"
+          },
+          "learningFileName": {
+            "id": "learningFileName",
+            "title":"Learning file name",
+            "type": "string"
+          },
+          "clustering": {
+            "id": "clustering",
+            "title":"Clustering",
+            "type": "boolean"
+          },
+          "decode": {
+            "id": "decode",
+            "title":"Decode",
+            "type": "boolean"
+          },
+          "casse": {
+            "id": "casse",
+            "title":"Casse",
+            "type": "boolean"
+          },
+          "clean": {
+            "id": "clean",
+            "title":"Clean",
+            "type": "boolean"
+          },
+          "base": {
+            "id": "base",
+            "title":"Base",
+            "type": "string"
+          },
+          "clusterNumber": {
+            "id": "clusterNumber",
+            "title":"Number of clusters",
+            "type": "integer"
+          },
+          "ruleType": {
+            "id": "ruleType",
+            "title":"Rule type",
+            "type": "string"
+          },
+          "learningPath": {
+            "id": "learningPath",
+            "title":"Learning Path",
+            "type": "string"
+          },
+          "configFileName": {
+            "id": "configFileName",
+            "title":"Config file name",
+            "type": "string"
+          },
+          "mahout": {
+            "id": "mahout",
+            "title":"Config file name",
+            "type": "string"
+          }
+        }
+
+      }

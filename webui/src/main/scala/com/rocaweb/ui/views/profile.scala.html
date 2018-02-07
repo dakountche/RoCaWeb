@@ -1,0 +1,90 @@
+@main("Profiles") {
+
+<div class="content">
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-md-4">
+
+				<div class="chart-wrapper">
+					<div class="card">
+						<div class="header">
+							<div class="chart-title">
+								<h4 class="title">Contracts</h4>
+								<div class="nav">
+									<i class="pe-7s-look btn" onclick="AffichageTreeview('0')"></i>
+									<i class="pe-7s-download btn" onclick="downloadRule()"></i>
+								</div>
+							</div>
+						</div>
+
+						<div class="chart-stage">
+							<div class="content">
+								<select id="profiles" size="5"
+									style="width: 80%; margin-left: 5%"></select>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="chart-wrapper">
+							<div class="card">
+								<div class="header">
+									<div class="chart-title">
+										<h4 class="title">Visualization</h4>
+									</div>
+								</div>
+								<div class="chart-stage">
+									<div class="row">
+										<div class="col-md-7">
+											<div class="chart-title">
+												<h4 class="title">
+													View <i onclick='AffichageTreeview("1")'
+														class="pe-7s-refresh-2 btn"></i> <i
+														onclick='expandTreeview()' class="pe-7s-angle-down btn"></i>
+													<i onclick='collapseTreeview()' class="pe-7s-angle-up btn"></i>
+													<i onclick='VisualizeRuleNode()'
+														class="pe-7s-angle-right btn"></i>
+												</h4>
+											</div>
+											<div id="treeview1" class=""></div>
+
+
+										</div>
+
+										<div class="col-md-5">
+											<div class="chart-title">
+												<h4 class="title">Editor</h4>
+											</div>
+											<textarea id=myOccurence name="occurence" rows=12
+												readonly=true style="width: 100%; resize: none;"></textarea>
+											<input type="hidden" onclick="SaveEditor()"
+												class="btn btn-default" data-toggle="modal"
+												data-target=".bs-example-modal-sm" value="Save"></input>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</div>
+<!-- Fonction Javascript  -->
+<script type="text/javascript"
+	src='@routes.Assets.at("js/rocaweb/profiles.js")'></script>
+<script type="text/javascript"
+	src='@routes.Assets.at("js/jquery.fileDownload.js")'></script>
+
+}

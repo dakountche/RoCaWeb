@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery File Upload Example</title>
+    <style>
+        .progress,
+        .progress-animated .progress-bar,
+        .progress-animated .bar {
+        background: url("@routes.Assets.at("img/progressbar.gif")") !important;
+        filter: none;
+        }
+        .fileupload-processing .fileupload-process,
+        .files .processing .preview {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url(@routes.Assets.at("img/progressbar.gif")") center no-repeat;
+        background-size: contain;
+        }
+    </style>
+</head>
+<body>
+
+
+<script>
+$(function () {
+    $('#fileupload').fileupload({
+        dataType: 'json',
+        url: '/data/input',
+        sequentialUploads: true,
+        add: function (e, data) {
+            data.context = $('<p/>').text('Uploading...').appendTo(document.body);
+            data.submit();
+        },
+
+        progress: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .bar').css(
+                'width',
+                 progress + '%'
+            );
+        },
+
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progresstotal .bar').css(
+                'width',
+                 progress + '%'
+            );
+        },
+        done: function (e, data) {
+            data.context.text('Upload finished.');
+        }
+    });
+});
+</script>
+
+<span class="btn btn-success fileinput-button">
+        <i class="glyphicon glyphicon-plus"></i>
+        <span>Select files...</span>
+        <!-- The file input field used as target for the file upload widget -->
+        <input id="fileupload" type="file" name="files[]" multiple>
+    </span>
+<br>
+<br>
+<!-- The global progress bar -->
+<div id="progress" class="progress">
+    <div class="bar" style="width: 0%;"></div>
+</div>
+<div id="progresstotal" class="progress">
+    <div class="bar" style="width: 0%;"></div>
+</div>
+
+<!-- The container for the uploaded files -->
+<div id="files" class="files"></div>
+
+</body>
+</html>

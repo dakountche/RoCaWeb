@@ -1,0 +1,125 @@
+version: '2'
+services:
+    elasticsearch:
+      build: ./elasticsearch
+      image: elasticsearch
+      container_name: elasticsearch
+      environment:
+        - bootstrap.memory_lock=true
+      ulimits:
+        memlock:
+          soft: -1
+          hard: -1
+      mem_limit: 1g
+      volumes:
+        - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      ports:
+        - "9200:9200"
+        - "9300:9300"
+      links:
+        - logstash
+        - kibana
+      networks:
+        - public
+
+    logstash:
+      build: ./logstash
+      image: logstash
+      container_name: logstash
+      command: bash -c "setfacl -m u:logstash:r /var/log/apache2/modsec_audit.log && logstash -f /etc/logstash/conf.d  -w 8"
+      volumes:
+        - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+        - ./logstash/pipeline:/usr/share/logstash/pipeline
+        - ./var/log/apache2:/var/log/apache2
+        - ./logstash/etc/logstash:/etc/logstash
+      ports:
+        - "5000:5000"
+      networks:
+        - public
+
+    kibana:
+      build: ./kibana
+      image: kibana
+      container_name: kibana
+      volumes:
+        - ./kibana/config/:/opt/kibana/config/
+      ports:
+        - "5601:5601"
+      networks:
+        - public
+
+    agent-hackazon:
+      build: ./agent
+      image: agent
+      container_name: agent-hackazon
+      command: apache2ctl -f /etc/apache2/apache2.conf -e info -DFOREGROUND
+      volumes:
+        - ./agent/apache2:/etc/apache2
+        - ./agent/modsecurity:/etc/modsecurity
+        - ./agent/rules:/opt/rocaweb/rules
+        - ../../validation/src/main/lua:/opt/validation
+        - ./var/log/apache2:/var/log/apache2
+      ports:
+        - "80:80"
+        - "3306:3306"
+      networks:
+        - public
+        - private
+      links:
+        - hackazon
+      
+      
+    agent-webgoat:
+      build: ./agent
+      image: agent
+      container_name: agent-webgoat
+      command: apache2ctl -f /etc/apache2/apache2.conf -e info -DFOREGROUND
+      volumes:
+        - ./agent/apache2:/etc/apache2
+        - ./webgoat/waf-config:/etc/apache2/sites-available
+        - ./agent/modsecurity:/etc/modsecurity
+        - ./agent/rules:/opt/rocaweb/rules
+        - ../../validation/src/main/lua:/opt/validation
+        - ./var/log/apache2:/var/log/apache2
+      ports:
+        - "8080:8080"
+      networks:
+        - public
+        - private
+      links:
+        - webgoat
+
+    webui:
+      build: ./webui
+      image: webui
+      container_name: webui
+      command: rocaweb-web-user-interface
+      ports:
+        - "9001:9000"
+      volumes:
+        - ./webui/conf:/opt/rocaweb-web-user-interface-0.1-SNAPSHOT/conf
+      networks:
+       - public
+   
+
+    hackazon:
+      build: ./hackazon
+      image: hackazon
+      container_name: hackazon
+      networks:
+        - private
+      volumes:
+        - /var/lib/mysql
+
+    webgoat:
+      build: ./webgoat
+      image: webgoat
+      container_name: webgoat
+      networks:
+        - private
+
+networks:
+   public:
+     external: true
+   private:
+     external: false

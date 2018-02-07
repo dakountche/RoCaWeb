@@ -1,0 +1,16 @@
+ % 1. Title: Comments
+   % 
+   % 2. Sources:
+   %      (a) Creator: RocaWeb Team
+   %     
+   @RELATION comment
+   @ATTRIBUTE comment      String
+   @ATTRIBUTE class        {normal,abnormal}
+   
+   @DATA
+  "bonjour monsieur le hacker.",normal
+  "Une phrase normale.",normal
+  "J'aime bien votre site internet.",normal
+  "Ton site est vraiment cool.",normal
+  "index.php?name=guest<script>alert('attacked')</script>",abnormal
+  "SELECT * FROM Users WHERE UserId = 105 or 1=1",abnormal

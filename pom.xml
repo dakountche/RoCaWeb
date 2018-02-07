@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.rocaweb</groupId>
+	<artifactId>rocaweb</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>RoCaWeb Maven Parent</name>
+	<description>RoCaWeb is a project between IMT Atlantique (ex. Télécom Bretagne) and Kereval financed by the RAPID grant. </description>
+	<url>https://github.com/dakountche/RoCaWeb.git</url>
+	<organization>
+		<name>IMT Atlantique Bretagne Pays De La Loire</name>
+		<url>https://www.imt-atlantique.fr/</url>
+	</organization>
+
+
+	<properties>
+		<gpg.skip>true</gpg.skip>
+		<test.include>**/*Test.java</test.include>
+		<animal.sniffer.version>1.16</animal.sniffer.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<inceptionYear>2014</inceptionYear>
+	<licenses>
+		<license>
+			<name>GNU GENERAL PUBLIC LICENSE Version 3</name>
+			<url>https://www.gnu.org/licenses/gpl.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<prerequisites>
+		<maven>3.0.3</maven>
+	</prerequisites>
+	<scm>
+		<connection>scm:https://github.com/dakountche/RoCaWeb.git</connection>
+		<developerConnection>scm:https://github.com/dakountche/RoCaWeb.git</developerConnection>
+		<url>https://github.com/dakountche/RoCaWeb.git</url>
+	</scm>
+
+	<developers>
+		<developer>
+			<id>dakountche</id>
+			<name>Djibrilla Amadou Kountche</name>
+			<email>djibrilla.amadoukountche@gmail.com</email>
+			<roles>
+				<role>Postdoctoral Researcher</role>
+				<role>developer</role>
+				<role>owner</role>
+			</roles>
+
+		</developer>
+
+		<developer>
+			<name>Sylvain Gombault</name>
+			<email>sylvain.gombault@imt-atlantique.fr</email>
+			<roles>
+				<role>Professor</role>
+				<role>developer</role>
+				<role>owner</role>
+			</roles>
+			<organization>IMT Atlantique Bretagne Pays De La Loire</organization>
+			<organizationUrl>https://www.imt-atlantique.fr/</organizationUrl>
+		</developer>
+
+		<developer>
+			<name>Yacine Tamoudi</name>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<organization>Kereval</organization>
+			<organizationUrl>http://www.kereval.com</organizationUrl>
+		</developer>
+
+		<developer>
+			<name>Alain Ribault</name>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<organization>Kereval</organization>
+			<organizationUrl>http://www.kereval.com</organizationUrl>
+		</developer>
+
+		<developer>
+			<name>Alexandre Clerissi</name>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<organization>Kereval</organization>
+			<organizationUrl>http://www.kereval.com</organizationUrl>
+		</developer>
+
+		<developer>
+			<name>Jean-Baptiste Durville</name>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<organization>Eurecom Sophia-Antipolis - IMT Atlantique</organization>
+			<organizationUrl>https://www.imt-atlantique.fr/</organizationUrl>
+		</developer>
+
+	</developers>
+
+	<modules>
+		<module>commons</module>
+		<module>learning</module>
+		<module>webui</module>
+	</modules>
+
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.7.0</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
+
+				</plugin>
+				<plugin>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>3.0.1</version>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<phase>post-integration-test</phase>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>animal-sniffer-maven-plugin</artifactId>
+					<version>${animal.sniffer.version}</version>
+					<configuration>
+						<signature>
+							<groupId>org.codehaus.mojo.signature</groupId>
+							<artifactId>java18</artifactId>
+							<version>1.0</version>
+						</signature>
+					</configuration>
+					<executions>
+						<execution>
+							<id>check-java-version-compatibility</id>
+							<phase>test</phase>
+							<goals>
+								<goal>check</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.10.4</version>
+					<configuration>
+						<notimestamp>true</notimestamp>
+					</configuration>
+					<executions>
+						<execution>
+							<id>attach-docs</id>
+							<phase>post-integration-test</phase>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>1.8</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.20.1</version>
+					<configuration>
+						<includes>
+							<include>${test.include}</include>
+						</includes>
+					</configuration>
+				</plugin>
+
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>2.7.1</version>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+
+	</build>
+
+	<distributionManagement>
+		<site>
+			<id>rocaweb-site</id>
+			<name>RoCaWeb Documentation Site</name>
+			<url>scp://dummy.server/dontinstall/usestaging</url>
+		</site>
+	</distributionManagement>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>2.8</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>2.8</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-configuration</groupId>
+				<artifactId>commons-configuration</artifactId>
+				<version>1.10</version>
+			</dependency>
+
+
+
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.5</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-math3</artifactId>
+				<version>3.6.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-cli</groupId>
+				<artifactId>commons-cli</artifactId>
+				<version>1.4</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-vfs2</artifactId>
+				<version>2.1</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>21.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>2.8.0</version>
+			</dependency>
+
+
+
+			<dependency>
+				<groupId>org.jdom</groupId>
+				<artifactId>jdom2</artifactId>
+				<version>2.0.6</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-httpclient</groupId>
+				<artifactId>commons-httpclient</artifactId>
+				<version>3.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>colt</groupId>
+				<artifactId>colt</artifactId>
+				<version>1.2.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>nz.ac.waikato.cms.weka</groupId>
+				<artifactId>weka-dev</artifactId>
+				<version>3.9.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>de.julielab</groupId>
+				<artifactId>aliasi-lingpipe</artifactId>
+				<version>4.1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>de.lmu.ifi.dbs.elki</groupId>
+				<artifactId>elki</artifactId>
+				<version>0.7.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>de.lmu.ifi.dbs.elki</groupId>
+				<artifactId>elki-libsvm</artifactId>
+				<version>0.7.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.takawitter</groupId>
+				<artifactId>trie4j</artifactId>
+				<version>0.9.6</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.scala-tools</groupId>
+				<artifactId>maven-scala-plugin</artifactId>
+				<version>2.15.2</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.9</version>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<profiles>
+		<profile>
+			<id>jdk8</id>
+			<activation>
+				<jdk>[1.8,)</jdk>
+			</activation>
+			<!-- Disable doclint under JDK 8 -->
+			<reporting>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<configuration>
+							<additionalparam>-Xdoclint:-html</additionalparam>
+						</configuration>
+					</plugin>
+				</plugins>
+			</reporting>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<configuration>
+							<additionalparam>-Xdoclint:-html</additionalparam>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+</project>

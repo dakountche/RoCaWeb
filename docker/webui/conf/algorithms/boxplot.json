@@ -1,0 +1,19 @@
+{
+"com.rocaweb.learning.algorithms.statistical.BoxPlot":   {
+
+
+	"learningFileName": "fileName",
+	"clustering": false,
+	"decode": false,
+	"casse": false,
+	"clean": false,
+	"base": "utf-8",
+	"clusterNumber": 0,
+	"ruleType": "ModSecurity",
+	"learningPath": "learningDir",
+	"configFileName": "META-INF/algorithms-config.xml",
+	"mahout":""
+
+}
+
+}

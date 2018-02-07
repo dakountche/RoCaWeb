@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.rocaweb</groupId>
+		<artifactId>rocaweb</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>learning</artifactId>
+	<name>RoCaWeb Machine Learning module</name>
+	<description>
+	
+	</description>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<r.commons.version>1.0.0-SNAPSHOT</r.commons.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.rocaweb</groupId>
+			<artifactId>commons</artifactId>
+			<version>${r.commons.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>colt</groupId>
+			<artifactId>colt</artifactId>
+			
+		</dependency>
+
+		<dependency>
+			<groupId>nz.ac.waikato.cms.weka</groupId>
+			<artifactId>weka-dev</artifactId>
+			
+		</dependency>
+
+		<dependency>
+			<groupId>de.julielab</groupId>
+			<artifactId>aliasi-lingpipe</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>de.lmu.ifi.dbs.elki</groupId>
+			<artifactId>elki</artifactId>
+		
+		</dependency>
+
+		<dependency>
+			<groupId>de.lmu.ifi.dbs.elki</groupId>
+			<artifactId>elki-libsvm</artifactId>
+		
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.takawitter</groupId>
+			<artifactId>trie4j</artifactId>
+		</dependency>
+    
+       <dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>	
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-math3</artifactId>
+		</dependency>
+       
+       
+	
+	</dependencies>
+
+
+</project>

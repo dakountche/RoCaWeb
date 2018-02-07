@@ -1,0 +1,216 @@
+@(message: String) @main("Learning") {
+
+
+<div class="content">
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="row">
+					<div class="chart-wrapper">
+						<div class="card">
+							<div class="header">
+								<div class="chart-title">
+									<h4 class="title">Data</h4>
+
+									<div class="nav">
+
+										<i class="pe-7s-monitor btn "
+											onclick="VisualizeClusterizeData()"></i>
+
+									</div>
+								</div>
+
+
+							</div>
+
+							<div class="chart-stage">
+								<div class="content">
+									<SELECT id="clusterizedData" NAME="Liste" size="5"
+										style="width: 90%"></SELECT>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+
+					<div class="chart-wrapper">
+						<div class="card">
+							<div class="header">
+								<div class="chart-title">
+									<h4 class="title">Visualization</h4>
+
+									<div class="nav">
+										<i onclick='AffichageTreeview("1")'
+											class="pe-7s-refresh-2 btn"></i> <i
+											onclick='expandTreeview()' class="pe-7s-angle-down btn"></i>
+										<i onclick='collapseTreeview()' class="pe-7s-angle-up btn"></i>
+									</div>
+								</div>
+							</div>
+							<div class="content">
+
+
+								<div id="treeview1" class=""></div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="chart-wrapper">
+							<div class="card">
+								<div class="header">
+									<div class="chart-title">
+										<h4 class="title">Batch setting</h4>
+									</div>
+								</div>
+								<div class="content">
+									<div id="tabs"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+
+
+
+						<div class="chart-wrapper">
+							<div class="card">
+								<div class="header">
+									<div class="chart-title">
+										<h4 class="title">Algorithms</h4>
+									</div>
+								</div>
+
+								<div class="chart-stage">
+									<div class="content">
+										<SELECT id="algorithms" NAME="list_algorithms" size="5"
+											style="width: 90%"></SELECT>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+					</div>
+					<div class="col-md-5">
+
+						<div class="chart-wrapper">
+							<div class="card">
+								<div class="header">
+									<div class="chart-title">
+										<h5 class="title">Parameters</h5>
+									</div>
+									<div class="content">
+										<div class="container-fuild">
+											<div class="row">
+												<div class="col-md-6"></div>
+												<div class="col-md-2"></div>
+												<div class="col-md-3">
+													<button class="btn" disabled='disabled'>Add</button>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="chart-wrapper">
+							<div class="card">
+								<div class="header">
+									<div class="chart-title">
+										<h5 class="title">Execution</h5>
+									</div>
+								</div>
+								<div class="content">
+									<button class="btn" onclick="launchNewLearningBatch()">Run</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="chart-wrapper">
+							<div class="card">
+								<div class="header">
+									<div class="chart-title">
+										<h4 class="title">Running</h4>
+									</div>
+								</div>
+								<div class="chart-stage">
+
+
+
+									<div class="conteneur-fluide">
+										<!-- <div class="row clearfix"> -->
+
+										<div class="row">
+											<div class="col-md-12" style="overflow: auto">
+
+
+												<table id='tab_logic'
+													class="table table-bordered table-hover"
+													style="width: 100%">
+													<thead>
+														<th>Profil</th>
+														<th>Website</th>
+														<th>Actif</th>
+														<th>input</th>
+														<th>status</th>
+													</thead>
+
+													<tbody id='myTable'>
+													</tbody>
+												</table>
+
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+</div>
+
+
+
+
+
+<!-- Fonction Javascript  -->
+<script type="text/javascript"
+	src='@routes.Assets.at("js/rocaweb/learning.js")'></script>
+
+
+}

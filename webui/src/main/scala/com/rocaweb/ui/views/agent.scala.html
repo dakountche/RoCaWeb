@@ -1,0 +1,35 @@
+@(agenturl: String,reversedport: String) @main("Agent") {
+
+<div class="content">
+	<div class="container-fluid">
+				<div class="card">
+					<div class="header">
+						<h4 class="title">Detection</h4>
+						<p class="category">1 Hour performance</p>
+					</div>
+					<div class="content">
+								<div class="embed-responsive embed-responsive-16by9">
+    							<iframe src="http://@agenturl:@reversedport/server-status" height="600" width="800"></iframe>
+    							</div>
+
+						<div id="chartHours" class="ct-chart">
+
+						</div>
+						<div class="footer">
+							<div class="legend"></div>
+							<hr>
+							<div class="stats">
+								<i class="fa fa-history"></i> Updated 3 minutes ago
+							</div>
+						</div>
+					</div>
+				</div>
+	</div>
+</div>
+
+
+<!-- Fonction Javascript  -->
+<script type="text/javascript"
+	src='@routes.Assets.at("js/rocaweb/agent.js")'></script>
+
+}

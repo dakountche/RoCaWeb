@@ -1,0 +1,59 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           com.rocaweb.controllers.Application.data
+
+GET     /dashboard                  com.rocaweb.controllers.Application.dashboard()
+
+GET     /data                      com.rocaweb.controllers.Application.data
+
+GET     /profile                    com.rocaweb.controllers.Application.profile()
+
+GET     /user                    com.rocaweb.controllers.Application.user()
+
+
+GET     /notifications                    com.rocaweb.controllers.Application.notifications()
+
+GET     /configuration                    com.rocaweb.controllers.Application.configuration()
+
+
+GET     /help                    com.rocaweb.controllers.Application.help()
+
+GET     /learning                   com.rocaweb.controllers.Application.learning()
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /res/$file<.*>                                       controllers.Assets.at(path="/public", file)
+
+
+GET     /data/input/html                                      	com.rocaweb.controllers.PDMLCrud.index
+GET     /data/input/file                                        com.rocaweb.controllers.PDMLCrud.listfiles
+GET     /data/input/es                                        	com.rocaweb.controllers.PDMLCrud.listES
+GET     /data/input/$file<.*>                                 	com.rocaweb.controllers.PDMLCrud.get(file: String)
+POST    /data/input/file                                           	com.rocaweb.controllers.PDMLCrud.up
+POST    /data/input/remove                                      com.rocaweb.controllers.PDMLCrud.removeInputData
+POST     /data/input/clusterize/file                            com.rocaweb.controllers.PDMLCrud.clusterizeInputFile
+POST     /data/input/clusterize/es                              com.rocaweb.controllers.PDMLCrud.clusterizeInputES
+
+GET		/data/clusterized                                       com.rocaweb.controllers.Preprocess.list
+POST	/data/clusterized/node                                  com.rocaweb.controllers.Preprocess.getNode
+POST	/data/clusterized/remove                                 com.rocaweb.controllers.Preprocess.removePreprocessed
+POST	/data/clusterized/node/save                             com.rocaweb.controllers.Preprocess.saveNode
+GET		/data/clusterized/:idwww                                com.rocaweb.controllers.Preprocess.get(idwww: String, rule = null)
+GET		/data/clusterized/:idwww/:rule                          com.rocaweb.controllers.Preprocess.index(idwww: String, rule: String)
+POST 	/data/clusterized/visualize                        		com.rocaweb.controllers.Preprocess.setTree
+GET		/data/clusterized/treeview                        		com.rocaweb.controllers.Preprocess.get(idwww = null, rule = null)
+
+
+POST    /learning/job/new										com.rocaweb.controllers.Learning.launchNewJob
+GET     /learning/jobs											com.rocaweb.controllers.Learning.listJobs
+GET		/learning/job/delete/:idwww								com.rocaweb.controllers.Learning.deleteJobResult(idwww: String)
+
+
+GET		/profiles												com.rocaweb.controllers.profile.listProfiles
+GET		/profiles/:idwww                               			com.rocaweb.controllers.profile.getProfile(idwww: String)
+GET		/profiles/download/:idwww/rules.conf                    com.rocaweb.controllers.profile.getRuleFile(idwww: String)
+GET		/profiles/download/:idwww/rules.txt                     com.rocaweb.controllers.profile.getRuleFile(idwww: String)
+POST	/profiles/:idwww/node                                  	com.rocaweb.controllers.profile.getNode(idwww: String)

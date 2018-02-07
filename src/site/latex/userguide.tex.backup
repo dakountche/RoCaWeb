@@ -1,0 +1,524 @@
+\documentclass[a4paper,10pt,justified]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\hypersetup{colorlinks} % Comment this line if you don't wish to have colored links
+
+\usepackage{microtype} % Improves character and word spacing
+
+\usepackage{lipsum} % Inserts dummy text
+
+\usepackage{booktabs} % Better horizontal rules in tables
+
+\usepackage{graphicx} % Needed to insert images into the document
+\graphicspath{{graphics/}} % Sets the default location of pictures
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio} % Improves figure scaling
+
+\usepackage{fancyvrb} % Allows customization of verbatim environments
+\fvset{fontsize=\normalsize} % The font size of all verbatim text can be changed here
+
+\newcommand{\hangp}[1]{\makebox[0pt][r]{(}#1\makebox[0pt][l]{)}} % New command to create parentheses around text in tables which take up no horizontal space - this improves column spacing
+\newcommand{\hangstar}{\makebox[0pt][l]{*}} % New command to create asterisks in tables which take up no horizontal space - this improves column spacing
+
+\usepackage{xspace} % Used for printing a trailing space better than using a tilde (~) using the \xspace command
+
+\newcommand{\monthyear}{\ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi\space\number\year} % A command to print the current month and year
+
+\newcommand{\openepigraph}[2]{ % This block sets up a command for printing an epigraph with 2 arguments - the quote and the author
+\begin{fullwidth}
+\sffamily\large
+\begin{doublespace}
+\noindent\allcaps{#1}\\ % The quote
+\noindent\allcaps{#2} % The author
+\end{doublespace}
+\end{fullwidth}
+}
+
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage} % Command to insert a blank page
+
+
+
+\usepackage{makeidx} % Used to generate the index
+\makeindex % Generate the index which is printed at the end of the document
+
+\usepackage{listings}
+% Title Page
+\title{Petit manuel de RoCaWeb}
+\author{Team RoCaWeb}
+
+
+\begin{document}
+
+\frontmatter
+
+
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title page
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+% 
+% \newpage
+% \begin{fullwidth}
+% ~\vfill
+% \thispagestyle{empty}
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{\baselineskip}
+% Copyright \copyright\ \the\year\ \thanklessauthor
+% 
+% \par\smallcaps{Published by T\'elecom-Bretagne et Kereval}
+% 
+% %\par\smallcaps{\url{http://www.bookwebsite.com}}
+% 
+% %\par License information.\index{license}
+% 
+% \par\textit{First printing, \monthyear}
+% \end{fullwidth}
+
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Print the table of contents
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION PAGE
+%----------------------------------------------------------------------------------------
+
+
+
+%\begin{abstract}
+
+%\end{abstract}
+
+
+\chapter{Introduction}
+\section{Introduction}
+Dans ce petit guide, nous allons expliquer le fonctionnement du logiciel. Nous informons dès à présent le lecteur
+que RoCaWeb est toujours en constant développement, de ce fait, il fera face à des bugs que nous lui demandons de nous
+faire parvenir. Nous souhaitons aussi qu'après l'avoir testé, qu'il nous fasse parvenir les pros et les cons et des idées d'amélioration
+ainsi que des algorithmes à étudier.
+
+RoCaWeb est un projet en cours financée par la DGA et conduit par Kereval et Télécom Bretagne.
+% \sidenote{La Team Rocaweb se constitue de : \begin{itemize}
+%                                                                                                                                           \item Amadou Kountch\'e Djibrilla : PostDoctorant à Télécom-Bretagne
+%                                                                                                                                            \item Alain Ribault : Directeur Technique à Kereval
+%                                                                                                                                            \item Sylvain Gombault : Enseignant chercher à Télécom-Bretagne
+%                                                                                                                                            \item Yacine Tamoudi : Ingénieur sécurité à Kereval
+%                                                                                                                                          \end{itemize}
+% }
+
+% \sidenote{La Direction Générale de l'Armement (DGA) finance ce projet sous forme RAPID.}
+
+Il a pour but la conception :
+\begin{itemize}
+ \item d'un ou de plusieurs \textit{reverse proxies} ;
+ \item d'un module d'apprentissage ; 
+ \item et d'une interface graphique. 
+\end{itemize}
+
+Le reverse proxy est mis entre le client et un serveur et vérifie que l'utilisation que le client fait des services hébergés sur le serveur (ou du serveur lui-même)
+répond aux \textbf{contrats} régissant les services.  \'A la suite de cette vérification, le \textit{reverse proxy} autorise les requêtes ou lève des alertes. 
+Dans le projet RoCaWeb, le fonctionnement à terme du \textit{reverse} proxy devra assurer aussi bien un mode détection d'intrusions que la prévention. 
+Dans ce dernier cas, il aura la charge de couper la connexion. 
+L'interface graphique permet une gestion de l'apprentissage des contrats, leur manipulation et la gestion des profils.
+Nous allons maintenant donner quelques Définitions. 
+
+\section{Définitions}
+
+Le \textbf{contrat} spécifie le fonctionnement normal d'un service. Il est difficile de définir de façon exhaustive le \textbf{fonctionnement normal} d'un site web. 
+Cette difficulté s'accroit selon plusieurs facteurs dont par exemple le changement de frameworks applicatifs. 
+Cependant, \textit{l'apprentissage automatique} permet de déterminer, sur un ensemble de données représentative, un contrat. Les connaissances métiers servent aussi à compléter ce contrat. 
+
+Dans cette version de RoCaWeb, le contrat est défini sous forme :
+\begin{itemize}
+ \item d'expressions régulières;
+ \item de types prédéfinis.
+ \item ou un mixage de ces deux types. 
+\end{itemize}
+
+En partant de la capture d'un trafic, que nous supposons \textbf{sain},\sidenote{Il faut noter que cette hypothèse joue un rôle important dans la suite. Car nos algorithmes ne traitent pas ce "bruit``.
+Dans le cas où le trafic n'est pas sain, nous avons prévu des prétraitements pour éliminer les attaques connues, les doublons, etc. avant d'apprendre} 
+
+nous avons conçus des algorithmes pour apprendre des expressions régulières et aussi assigner des types prédéfinis
+à ces données. Nous avons aussi implémenté la validation croisée et le \textit{clustering} afin d'améliorer la phase d'apprentissage.
+
+Ainsi, l'\textbf{apprentissage} est l'utilisation d'algorithmes de \textit{machine learning} 
+ou autres domaines pour déterminer des invariants permettant de définir un \textbf{comportement normal.}
+Le lecteur trouvera une description détaillé de ces algorithmes dans l'article publie dans la conférence C\&ESAR 2014. 
+
+\textbf{Le profil} est l'ensemble des contrats exprimé sous les formes définis et appris pour un site web.  
+
+\textbf{L'utilisateur} est toute personne amenée à utiliser ce programme. Il peut s'agir d'un expert en sécurité ayant des compétences sur les algorithmes ou non. 
+Ainsi, il aura plus ou moins besoin de se familiariser avec les algorithmes. Mais dans cette phase, il lui faudrait acquérir les notions sur l'alignement de séquences et la validation croisée.  
+
+
+\lstdefinestyle{BashInputStyle}{
+  language=bash,
+  basicstyle=\small\sffamily,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=3pt,
+  frame=tb,
+  columns=fullflexible,
+  backgroundcolor=\color{yellow!20},
+  linewidth=0.9\linewidth,
+  xleftmargin=0.1\linewidth
+}
+
+\section{Installation du logiciel}
+La version actuelle est distribuée sous forme d'une archive .tar.gz  qu'il faudra décompresser. 
+\'A sa racine vous trouverez  trois fichiers exécutables : 
+\begin{enumerate}
+ \item rocaweb.sh pour les systèmes UNIX
+ \item rocaweb.bat  pour Microsoft Windows. 
+ \item rocaweb.jar multiplateformes. 
+\end{enumerate}
+Les deux premiers fichiers sont des raccourcis pour ne pas avoir à taper :\sidenote{Dans le cas où vous vous trouver à la racine.} 
+
+%\begin{center}
+\begin{lstlisting}[style=BashInputStyle]
+# java -jar rocaweb.jar 
+\end{lstlisting}
+
+ 
+%\end{center}
+
+
+
+Vous pouvez aussi double cliquer sur rocaweb.jar pour lancer le programme. 
+
+\chapter{Les vues}
+Au premier démarrage du programme, vous allez voir apparaître une fenêtre vous demandant d'accepter la licence. 
+L'interface graphique que nous avons fournis se base sur celle d'OWASP ZAP. Nous avons gardés quelques similarités. 
+Une fois accepté, le programme affiche la vue apprentissage par défaut ou la dernière vue sélectionnée avant la fermeture. 
+
+
+\begin{figure}
+ \includegraphics[width=10cm, height=8cm]{./images/license.png}
+ \caption{La licence de OWASP ZAP.}
+\end{figure}
+
+ 
+
+
+\subsection{La vue apprentissage}
+\begin{marginfigure}
+ \includegraphics[width=0.5cm, height=0.5cm]{./images/expand_info.png}
+ \label{iconevueapprentissage}
+\caption{Icône de la vue apprentissage.}
+ \end{marginfigure}
+
+C'est la vue principale de RoCaWeb. Elle est illustrée par la figure~\ref{vueapprentissage}. 
+\begin{figure}
+ \includegraphics[width=11cm, height=7cm]{./images/vueapprentissage.png}
+ \label{vueapprentissage}
+ \caption{La vue apprentissage.}
+\end{figure}
+
+Elle permet  : 
+\begin{itemize}
+ \item la visualisation des données d'apprentissage;
+ \item la configuration des prétraitements à appliquer sur ces données;
+ \item  le choix et le paramétrage des algorithmes d'apprentissage ;
+ \item  le choix du formatage des règles. 
+\end{itemize}
+Nous allons détailler tous ces point plus en avant. 
+Pour naviguer vers cette vue,  il vous suffit de cliquer sur le bouton dans la barre des outils\ref{iconevueapprentissage}.
+
+
+
+
+\subsection{La vue gestions des sites}
+\begin{marginfigure}
+ \includegraphics[width=0.4cm, height=0.4cm]{./images/expand_sites.png}
+ \label{iconevuesites}
+\caption{Icône de la vue site.}
+ \end{marginfigure}
+ 
+Cette vue permet à terme de gérer la phase d'obtention des données d'apprentissage et des sites web. 
+Cette vue est illustrée par la figure~\ref{vuesite}.
+\begin{figure}
+ \includegraphics[width=10cm, height=7cm]{./images/vuesite.png}
+ \label{vuesite}
+ \caption{Vue permettant la gestion des sites Web notamment le crawling.}
+\end{figure}
+
+
+
+Elle est donnée à titre illustrative et nous avons prévu
+d'adapter les \textit{crawlers} de OWASP ZAP pour pouvoir : 
+\begin{itemize}
+ \item à partir d'une capture extraire les URL d'intérêt pour RoCaWeb
+ \item crawler les sites afin : 
+ \begin{itemize}
+  \item d'obtenir leur squelette;
+  \item de compléter les données d'apprentissage en instrumentant le site.  
+ \end{itemize}
+ \item plusieurs autres traitements sont prévues à ce niveau. 
+\end{itemize}
+
+
+\subsection{La vue profil}
+\begin{marginfigure}
+ \includegraphics[width=0.5cm, height=0.5cm]{./images/expand_full.png}
+ \label{iconevuesites}
+\caption{Icône de la vue profil.}
+ \end{marginfigure}
+ 
+La vue profil permet la visualisation des profils et leur modification. Une fois l'apprentissage terminé, l'utilisateur peut décider ou non de sauvegarder le résultat. 
+Lorsque le site est nouveau, un profil vierge est crée contenant quatre répertoires : 
+\begin{itemize}
+ \item regex : pour les expressions régulières (Principalement les résultats d'alignement suivi de génération d'expressions régulières) ;
+ \item type : pour les résultats de l'algorithme de typage
+ \item vc : pour la validation croisée
+ \item proxies pour la configuration des reverses proxies qui surveillent ce site. Nous avons prévu à ce niveau un affichage en temps réel des performances  du profil sur chaque proxy.  
+\end{itemize}
+
+
+
+\chapter{L'apprentissage et la génération des règles}
+
+
+\section{Création d'une base d'apprentissage}
+
+
+
+Nous allons maintenant décrire en détails un processus d'apprentissage. L'utilisateur est supposé avoir un fichier PDML obtenu par ses soins...
+
+RoCaWeb dispose d'un parseur PDML permettant l'extraction des données.\sidenote{Le Packet Details Markup Language est un dialecte XML qui permet de décrire des capture de trafic. Il est supporté par Wireshark.} 
+Pour lancer le parseur, l'utilisateur clique sur le bouton PDML (entouré de rouge sur l'image~\ref{pdml}).
+
+Le programme tshark peut être utilisé pour enregistrer les requêtes au format PDML.
+
+\begin{lstlisting}[basicstyle=\tiny]
+tshark -V -T pdml -i eth0  -R "http.request && ip.dst == [IPDESTINATION] && ip.src == [IPSOURCE] \
+ && not http.request.uri matches \"(js|gif|png)\$\"" > fichier_output.pdml 
+\end{lstlisting}
+
+
+
+
+\begin{figure}
+ \includegraphics[width=10cm]{./images/pdml.png}
+\label{pdml}
+\caption{Cliquer sur le bouton PDML pour charger un fichier PDML.}
+ \end{figure}
+
+Pour ce exemple, nous allons utiliser un site interne à la société Kereval qui s'appelle \textit{tutos}.  Nous allons fournir un fichier capturé durant la semaine 35 de l'année 2014. 
+En cliquant sur le bouton PDML nous avons  la fenêtre suivant\ref{chargerPDML}  : 
+\begin{figure}
+ \includegraphics[width=10cm]{./images/pdmlcharger.png}
+ \label{chargerPDML}
+ \caption{Fenêtre pour charger un PDML}
+\end{figure}
+
+Ensuite, nous  choisissons le fichier contenant la capture. \sidenote{Il est à noter que nous avons tester cette version sur des capture ne contenant qu'un seul site.}
+A la fin du parsing, le nom ``tutos'' apparait dans l'arborescence du panneau ``Data''. 
+Il est à noter que l'utilisateur peut fournir d'autres données sans passer par le parseur. Pour cela, il suffit de créer un dossier à la racine du répertoire ``learninndata''. 
+
+Nous attirons, votre attention sur le fait qu'il faudra respecter un certain convention pour que les règles soit format correctement. 
+\begin{itemize}
+ \item un répertoire par site à la racine de learninndata
+ \item puis pour chaque site, l'arborescence doit correspondre à : 
+     
+     
+\begin{lstlisting}[basicstyle=\tiny]
+$learningdata/site/subdirs/.../methodeHTTP/paraName 
+\end{lstlisting}
+     
+Lorsque la méthode de formatage ne rencontre pas de méthode HTTP dans le chemin absolu, elle formate les règles en les faisant précédées du mot ``FILE''. 
+Nous allons montrer ce cas un peu plus loin. 
+
+\end{itemize}
+Voici un exemple de règle obtenu après apprentissage et formatée selon le format RoCaWeb: 
+
+\begin{lstlisting}[basicstyle=\tiny]
+SecRule "URL:'/tutos/php/skills/skill_eval_ins.php',GET:'SkillExperienceSelection_148716'" "0\+" "id:'0',sec:'wl',mode:'IDS'"  
+\end{lstlisting}
+
+
+
+\section{Exemples de cas d'utilisation}
+Une fois les données fournies, l'apprentissage peut commencer.  Il se déroule de la façon suivante :
+\begin{enumerate}
+ \item choix des données d'apprentissage
+ \item choix des prétraitements
+ \item choix des algorithmes
+ \item choix du formatage des règles. 
+\end{enumerate}
+
+Ce qui est illustré par la figure~\ref{exempleapprentissage}.
+
+\subsection{Premier cas d'utilisation}
+Par exemple, nous allons lancer un apprentissage sur tutos avec : 
+\begin{enumerate}
+ \item un nettoyage des doublons ;
+ \item par la méthode AMAA (Another Multiple Alignment Algorithm) ;
+ \item Avec comme sous méthode NeedlemanWunsch et un paramétrage par défaut de cet algorithme. 
+ \item et le format est celui de RoCaWeb. 
+ \item puis n'oublier pas de cliquer sur le bouton ``Ajouter'' pour que cette configuration d'apprentissage soit ajoutée à la liste des tâches à exécuter.
+\end{enumerate}
+L'utilisateur peut répéter le processus pour différent répertoire, sous-répertoires et fichiers. 
+
+
+\begin{figure}
+\includegraphics[width=10cm, height=7cm]{./images/exempleapprentissage.png}
+\label{exempleapprentissage}
+\caption{Le rouge indique les phases de l'apprentissage. Il signifie aussi que si vous oubliez une étape RoCaWeb ne sera pas content...}
+\end{figure}
+
+
+Lorsque l'utilisateur clique sur ``Ajouter'', les algoritmes choisis sont affichés dans le panneau ``Running`` en bas de l'écran et le bouton ''Run`` est activé. 
+Il peut dès à présent lancer cette tâche ou ajouter d'autres algorithmes. 
+Dans ce premier exemple, nous avons le résultat illustrée sur la figure~\ref{runcomplete}
+
+\begin{figure}
+\includegraphics[width=10cm, height=7cm]{./images/runcomplete.png}
+\label{runcomplete}
+\caption{Illustration de la fin de l'apprentissage. Vous pouvez répéter le processus autant que vous le souhaitez.}
+\end{figure}
+
+
+\subsection{Second cas d'utilisation}
+Dans ce second exemple, nous allons ajouter plusieurs algorithmes sur ''tutos`` et ''training`` et aussi le fichier ''cat``  dans training. 
+Il est à noter que l'utilisateur peut visualiser le contenu des fichier d'apprentissage avant de les utiliser. 
+Dans cette version, même s'il peut les éditer, les modifications ne sont pas prises en charge dans l'apprentissage. 
+
+\begin{figure}
+\includegraphics[width=10cm, height=7cm]{./images/secondcas.png}
+\label{secondcas}
+\caption{Second exemple plus riches sur l'apprentissage.}
+\end{figure}
+C'est à vous maintenant de paramétrer les algorithmes et d'évaluer les résultats. 
+
+Une question que le lecteur se posera est de savoir quel est le meilleur paramétrage ? \'A ce stade, nous continuons l’évaluation de nos algorithmes et nous ne pouvons pas lui fournir de  valeurs.
+Les valeurs par défaut ne sont pas des valeurs trouvées de façon empiriques. Mais elles permettent de générer des règles. 
+Cependant, AMAA et le typage génèrent des règles. Et lorsqu'ils sont combinées à la validation croisée permettent de créer un profil. 
+Nous avons fourni une version de Littleproxy avec un parseur de nos règles.  
+
+Une autre remarque est le format des règles. Deux sont supportés en ce moment et les autres sont des illustrations des fonctionnalités à intégrer dans une  version prochaine. 
+
+\chapter{La création d'un profil}
+
+Une fois l'apprentissage terminé, l'utilisateur peut sauvegarder le résultat dans un profil, en cliquant sur le bouton  ''Enregistrer``. 
+Dans le cas où, un profil n'existe pas, le programme en crée un et ouvre le dossier pour la sauvegarde. Ceci est illustrer par la figure~\ref{profil}. 
+
+Il est à noter que l'utilisateur peut aussi, éditer les règles  et, cette fois-ci, les modifications seront pris en compte et sauvegarder dans le profil. 
+
+\begin{figure}
+\includegraphics[width=10cm, height=8cm]{./images/profil.png}
+\label{profil}
+\caption{Création d'un profil vierge pour tutos.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=10cm, height=8cm]{./images/profil2.png}
+\label{profil2}
+\caption{Sauvegarde du profil dans regex ou type ou vc.}
+\end{figure}\sidenote{Vous pouvez aussi choisir un autre chemin.}
+
+Maintenant que vous avez créé vos profils, nous allons passer à la vue permettant de les manipuler. 
+
+\subsection{La visualisation et la gestion des profiles}
+Cette vue permet de : 
+\begin{itemize}
+ \item visualiser les profils
+ \item de créer de nouveaux;
+ \item ou d'importer des fichiers définissant des règles. 
+\end{itemize}
+
+%\subsubsection*{La visualisation des profils}
+Pour visualiser un profil, l'utilisateur clique sur l'arborescence afin de choisir le type de contrat. Celui est affiche comme sur la figure~\ref{profil4}. 
+Cette vue peut être personnalisée par un menu déroulant permettant de choisir plusieurs cas dont : 
+\begin{itemize}
+ \item une syntaxe pour mettre certaine partie de la règle en surbrillance. 
+ \item un retour à la ligne
+\end{itemize}
+Le menu déroulant apparait après un clic droit dans le panneau qui affiche les règle. Ce menu peut aussi servir en (en/de)coder les règles, à faire des recherches, etc. 
+
+\begin{figure}
+\includegraphics[width=10cm, height=8cm]{./images/profil3.png}
+\label{profil3}
+\caption{La visualisation des profils.}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[width=10cm, height=8cm]{./images/profil4.png}
+\label{profil4}
+\caption{Profil est affiché.}
+\end{figure} \sidenote{Le bouton ''Visualiser`` n'est pas activé pour le moment. A terme il permet une visualisation sous forme de graphe des règles.}
+
+
+\begin{figure}
+\includegraphics[width=10cm, height=8cm]{./images/profil5.png}
+\label{profil5}
+\caption{Coloration syntaxique de la vue et possibilité d'encoder et de retourner à la ligne.}
+\end{figure}
+
+%\subsubsection*{La création et l'import de profil}
+Comme nous l'avons indiqué, l'utilisateur peut créer un  profil vierge  et aussi importer des fichier déjà existant. 
+Pour ce faire, il clique dans la vue profil sur les boutons indiqués sur la figure~\ref{profil6}. 
+\begin{figure}
+\includegraphics[width=10cm, height=8cm]{./images/profil6.png}
+\label{profil6}
+\caption{Création et importation de profils.}
+\end{figure}
+
+
+\section{Le reverse proxy}
+
+Le proxy Rocaweb peut être utilisé pour valider le trafic à partir de règles au format natif ou Modsecurity.
+\sidenote{L'exécutable du proxy est fourni à la racine du répertoire rocaweb : rocaweb\_proxy\_V2.zip à décompresser dans un autre répertoire.} 
+
+Il est fourni sous forme de ficher jar et nécessite Java 7 pour fonctionner.
+
+\begin{lstlisting}[basicstyle=\footnotesize]
+    --dumping             Dumpe le trafic en PDML modifie 
+                          (nécessite l'option --validation pour etre active)
+    --folder <arg>        Lit les fichiers contenus dans le dossier 
+                          precise et parse les regles au format Rocaweb
+    --help                Affiche l'aide
+    --https               Le proxy se connecte en https au serveur cible et en http aux clients
+    --msfolder <arg>      Lit les fichiers contenus dans le dossier précise 
+                          et parse les regles au format Modsecurity. 
+                          Seules les règles correspondants à des expressions 
+                          regulieres sont comprises.
+    --port <arg>          Specifie le port d'écoute du proxy (par défaut 8080)
+    --reverse <arg>       Site cible
+    --reverseport <arg>   Port de connexion au site cible
+    --validation          Active la validation des requetes
+\end{lstlisting}
+
+
+
+
+Cette partie clôt la description des fonctionnalités principale que nous avons implémenté dans RoCaWeb. 
+Cependant, d'autres fonctionnalités sont présentes mais pas totalement aboutis. Notamment la configuration avancée des 
+algorithmes. Nous y travaillons. 
+
+
+\chapter{Conclusions}
+Nous allons maintenant aborder les cas où, le programme que vous aller utiliser rencontre des problèmes :  
+\begin{itemize}
+ \item le traitements des PDML peut lever des Exceptions 
+ \item lorsque vous ne choisissez par un fichier pour l'apprentissage ou un algorithmes
+ \item des restrictions liés au systèmes d'exploitation. Vous n'avez pas besoin de droit \textbf{root} pour utiliser ce programme, mais nous avons mis en œuvre deux processus légers qui surveillent
+ les dossiers ''/resource/learningdata`` et ''profiles`` pour qu'en cas de modifications les JTree associés soient automatiquement mis à jour. Or dans certain cas des exceptions ont été levées. 
+ 
+ 
+ \item l'adaptation automatique des vues à la taille des écrans est en cours d'amélioration. En effet, les panneaux et sous-panneaux sont redimensionnée mais pas toujours
+ de façon agréable. 
+ \item nous n'avons pas encore intégré une validation des entrées utilisateur. Ce qui veut dire que vous êtes libres de tester des injections de toutes sortes dans les 
+ champs recevant les paramètres. Normalement, vous devez voir des exceptions. Normalement...
+ 
+\end{itemize}
+
+Nous concluant sur le fait que la recherche et le développement sont en cours et que ces problèmes et d'autres seront solutionnés dans les versions futures. 
+Nous allons mettre en place des outils de mises à jours automatique et de réception des bugs et des souhaits. 
+
+
+\end{document}          

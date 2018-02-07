@@ -1,0 +1,72 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           							com.rocaweb.ui.controllers.HomeController.dashboard
+
+# Access to the Dashboard
+GET	/dashboard		    										com.rocaweb.ui.controllers.HomeController.dashboard
+
+# Access to the Data
+GET     /data			    									com.rocaweb.ui.controllers.HomeController.data
+
+# Access to the Learning
+GET    /learning	           									com.rocaweb.ui.controllers.HomeController.learning
+
+# Access to the Profiles
+
+GET   /profile			                                        com.rocaweb.ui.controllers.HomeController.profile
+
+# Access to the Agent
+GET   /agent                      							    com.rocaweb.ui.controllers.HomeController.agent
+
+# Access to the current user
+GET  /user                         								com.rocaweb.ui.controllers.HomeController.user
+
+# Access the Configuration
+GET /configuration                                              com.rocaweb.ui.controllers.HomeController.rocawebconfigview
+
+# Access the help
+GET /help                                                       com.rocaweb.ui.controllers.HomeController.help
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                                           controllers.Assets.versioned(path="/public", file: Asset)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /res/$file<.*>                                          controllers.Assets.at(path="/public", file)
+
+
+GET     /data/input/html                                      	com.rocaweb.ui.controllers.PDMLCrud.index
+GET     /data/input/file                                        com.rocaweb.ui.controllers.PDMLCrud.listfiles
+GET     /data/input/es                                        	com.rocaweb.ui.controllers.PDMLCrud.listES
+GET     /data/input/$file<.*>                                 	com.rocaweb.ui.controllers.PDMLCrud.get(file: String)
+POST    /data/input/file                                        com.rocaweb.ui.controllers.PDMLCrud.up
+POST    /data/input/remove                                      com.rocaweb.ui.controllers.PDMLCrud.removeInputData
+POST     /data/input/clusterize/file                            com.rocaweb.ui.controllers.PDMLCrud.clusterizeInputFile
+POST     /data/input/clusterize/es                              com.rocaweb.ui.controllers.PDMLCrud.clusterizeInputES
+
+GET		/data/clusterized                                       com.rocaweb.ui.controllers.Preprocess.list
+POST	/data/clusterized/node                                  com.rocaweb.ui.controllers.Preprocess.getNode
+POST	/data/clusterized/remove                                com.rocaweb.ui.controllers.Preprocess.removePreprocessed
+POST	/data/clusterized/node/save                             com.rocaweb.ui.controllers.Preprocess.saveNode
+GET		/data/clusterized/:idwww                                com.rocaweb.ui.controllers.Preprocess.get(idwww: String, rule = null)
+GET		/data/clusterized/:idwww/:rule                          com.rocaweb.ui.controllers.Preprocess.index(idwww: String, rule: String)
+POST 	/data/clusterized/visualize                        	    com.rocaweb.ui.controllers.Preprocess.setTree
+GET		/data/clusterized/treeview                              com.rocaweb.ui.controllers.Preprocess.get(idwww = null, rule = null)
+
+
+
+POST    /learning/job/new					                    com.rocaweb.ui.controllers.Learning.launchNewJob
+GET     /learning/jobs						                    com.rocaweb.ui.controllers.Learning.listJobs
+GET		/learning/job/delete/:idwww			                    com.rocaweb.ui.controllers.Learning.deleteJobResult(idwww: String)
+
+
+GET		/profiles					                            com.rocaweb.ui.controllers.Profile.listProfiles
+GET		/profiles/:idwww                                    	com.rocaweb.ui.controllers.Profile.getProfile(idwww: String)
+GET		/profiles/download/:idwww/rules.conf                    com.rocaweb.ui.controllers.Profile.getRuleFile(idwww: String)
+GET		/profiles/download/:idwww/rules.txt                     com.rocaweb.ui.controllers.Profile.getRuleFile(idwww: String)
+POST	/profiles/:idwww/node                                  	com.rocaweb.ui.controllers.Profile.getNode(idwww: String)
+
+

@@ -1,0 +1,3 @@
+{
+ "algorithms":["AMAA","RegexLearner", "AttributeLength", "AttributeCharacterDistribution", "TokenFinder", "CrossValidation"]
+}

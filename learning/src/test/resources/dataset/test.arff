@@ -1,0 +1,15 @@
+ % 1. Title: Examples of comments
+   % 
+   % 2. Sources:
+   %      (a) Creator: RoCaWeb Team
+   %     
+   % 
+   @RELATION test
+   @ATTRIBUTE comment  String
+   @ATTRIBUTE class        {normal,abnormal}
+   
+ @DATA
+  "Es-tu capable de me calsser en tant que normal.",normal
+  "Je mappelle Djibrilla. Et toi .", normal
+  "Télécom bretagne soutiens rocaweb.", normal
+  "<IMG SRC=j&#X41vascript:alert('test2')>",abnormal

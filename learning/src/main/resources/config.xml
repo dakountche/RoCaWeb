@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithms>
+<input>
+   <learningPath>/tmp</learningPath>
+   <learningFileName>fileName</learningFileName>
+   <clustering>false</clustering>
+   <decode>false</decode>
+   <casse>false</casse>
+   <clean>true</clean>
+   <base>utf-8</base>
+   <clusterNumber>0</clusterNumber>
+   <ruleType>ms</ruleType>
+</input>
+
+
+ <pair-alignment>
+   <penalty>-1</penalty>
+   <match>1</match>
+   <mismatch>0</mismatch>
+   <gapCharacter>¤</gapCharacter>
+   <functionName>Complete</functionName>
+ </pair-alignment>
+ 
+ 
+  <amaa>
+    <sub-algorithm>
+       <name>NeedlemanWunsch</name>
+       <default-config>true</default-config>
+       <sub-params>
+       <penalty>-11</penalty>
+       <match>10</match>
+       <mismatch>0</mismatch>
+       <gapCharacter>¤</gapCharacter>
+       <functionName>Complete</functionName>
+      </sub-params>
+   </sub-algorithm>
+  </amaa>
+
+
+<typing>
+   <bounded>false</bounded>
+</typing>
+
+
+<attributeLentgth>
+  <threshold>0.10</threshold>
+</attributeLentgth>
+
+
+<attributeCharacterDistribution>
+	<icd></icd>
+</attributeCharacterDistribution>
+
+<crossvalidation>
+  <k>5</k>
+  <ratio>0.5</ratio>
+  <shuffle>false</shuffle>
+
+  
+<sub-algorithm>
+  <name>AMAA</name>
+  <default-config>true</default-config>
+</sub-algorithm>
+
+<sub-algorithm>
+  <name>al</name>
+  <default-config>true</default-config>
+</sub-algorithm>
+
+<sub-algorithm>
+  <name>cd</name>
+  <default-config>true</default-config>
+</sub-algorithm>
+
+</crossvalidation>
+
+</algorithms>

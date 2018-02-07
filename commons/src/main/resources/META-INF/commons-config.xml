@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+
+	<constants>
+
+		<msRuleCount>1001</msRuleCount>
+
+	</constants>
+
+
+	<paths>
+
+		<learning></learning>
+		<rules></rules>
+		<ui></ui>
+		<modsecurityRules></modsecurityRules>
+
+	</paths>
+
+
+
+	<learning>
+		<algorithms>
+			<input>
+				<learningPath></learningPath>
+				<learningFileName>fileName</learningFileName>
+				<clustering>false</clustering>
+				<decode>false</decode>
+				<casse>false</casse>
+				<clean>false</clean>
+				<base>utf-8</base>
+				<clusterNumber>0</clusterNumber>
+				<ruleType>ModSecurity</ruleType>
+			</input>
+
+
+			<pair-alignment>
+				<penalty>-1</penalty>
+				<match>1</match>
+				<mismatch>0</mismatch>
+				<gapCharacter>¤</gapCharacter>
+				<functionName>Complete</functionName>
+			</pair-alignment>
+
+
+			<amaa>
+				<sub-algorithm>
+					<name>nw</name>
+					<default-config>true</default-config>
+				</sub-algorithm>
+			</amaa>
+
+
+
+			<typing>
+				<bounded>false</bounded>
+			</typing>
+
+
+			<attributeLentgth>
+				<threshold>0.10</threshold>
+			</attributeLentgth>
+
+
+			<attributeCharacterDistribution>
+				<icd></icd>
+			</attributeCharacterDistribution>
+
+			<tokinFinder>
+
+
+			</tokinFinder>
+
+             <structuralinference>
+             </structuralinference>
+			
+			<crossvalidation>
+				<k>10</k>
+				<ratio>0.8</ratio>
+				<shuffle>false</shuffle>
+
+
+				<sub-algorithm>
+					<name>AMAA</name>
+					<default-config>true</default-config>
+				</sub-algorithm>
+
+				<sub-algorithm>
+					<name>Typage</name>
+					<default-config>true</default-config>
+
+				</sub-algorithm>
+
+			</crossvalidation>
+
+			
+			<evaluation>
+				<random></random>
+				<reporting>
+					<format></format>
+					<saving></saving>
+				</reporting>
+
+			</evaluation>
+
+		</algorithms>
+
+	</learning>
+
+
+
+	 <ui>
+      <dashboardcolor>blue</dashboardcolor>
+
+	</ui>
+
+
+</config>

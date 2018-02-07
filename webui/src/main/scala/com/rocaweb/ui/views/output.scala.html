@@ -1,0 +1,8 @@
+@(params: Any*) @main("Debug") {
+
+<ul>
+	@for(elm <- params) {
+	<li>@elm.toString()</li> }
+</ul>
+
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <appender class="org.apache.log4j.RollingFileAppender" name="RocAlert_IDMEF">
+        <param value="logs/alerts_idmef.txt" name="File"/>
+        <param value="5" name="MaxBackupIndex"/>
+        <param value="50MB" name="MaxFileSize"/>
+        <layout class="org.apache.log4j.PatternLayout">
+         <param value="%-6r %d{ISO8601} %-5p [%t] %c{2} (%F:%L).%M() - %m%n" name="ConversionPattern"/>
+        </layout>
+    </appender>
+        <appender class="org.apache.log4j.RollingFileAppender" name="RocAlert_SYSLOG">
+        <param value="alerts_syslog.txt" name="File"/>
+        <param value="5" name="MaxBackupIndex"/>
+        <param value="50MB" name="MaxFileSize"/>
+        <layout class="org.apache.log4j.PatternLayout">
+         <param value="%d{ISO8601}  %m%n" name="ConversionPattern"/>
+        </layout>
+    </appender>
+        <appender class="org.apache.log4j.RollingFileAppender" name="RocAlert_HPCEF">
+        <param value="logs/alerts_hp-cef.txt" name="File"/>
+        <param value="5" name="MaxBackupIndex"/>
+        <param value="50MB" name="MaxFileSize"/>
+        <layout class="org.apache.log4j.PatternLayout">
+         <param value="%-6r %d{ISO8601} %-5p [%t] %c{2} (%F:%L).%M() - %m%n" name="ConversionPattern"/>
+        </layout>
+    </appender>
+            <appender class="org.apache.log4j.ConsoleAppender" name="RocAlert_SDOUT">
+        <layout class="org.apache.log4j.PatternLayout">
+         <param value="%d{ISO8601}  %m%n" name="ConversionPattern"/>
+        </layout>
+    </appender>
+           <appender class="org.apache.log4j.AsyncAppender" name="RocAlert">
+      <param name="BufferSize" value="500"/>
+    	<appender-ref ref="RocAlert_SYSLOG"/>
+    	<appender-ref ref="RocAlert_SDOUT"/>
+    </appender>
+    <appender name="RocLog" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param value="%-6r %d{ISO8601} %-5p [%t] %c{2} (%F:%L).%M() - %m%n" name="ConversionPattern"/>
+        </layout>
+    </appender>
+        <appender class="org.apache.log4j.ConsoleAppender" name="stdout">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param value="%-6r %d{ISO8601} %-5p [%t] %c{2} (%F:%L).%M() - %m%n" name="ConversionPattern"/>
+        </layout>
+    </appender>
+    <appender class="org.apache.log4j.FileAppender" name="TextFile">
+        <param value="false" name="Append"/>
+        <param value="log.txt" name="File"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param value="%-6r %d{ISO8601} %-5p [%t] %c{2} (%F:%L).%M() - %m%n" name="ConversionPattern"/>
+        </layout>
+    </appender>
+    <appender name="ASYNC" class="org.apache.log4j.AsyncAppender">
+    	<param name="BufferSize" value="500"></param>
+    	<appender-ref ref="TextFile"/>
+        <appender-ref ref="stdout"/>
+    </appender>
+    <logger name="com.rocaweb.agent.proxy" additivity="false">
+    	<level value="info">
+    		</level><appender-ref ref="RocLog"></appender-ref></logger>
+    <logger name="com.rocaweb.agent.validation" additivity="false">
+    	<level value="critical"></level>
+    	<appender-ref ref="RocAlert"></appender-ref></logger>
+    <root>
+        <level value="warn"/>
+        <appender-ref ref="ASYNC"/>
+    </root>
+</log4j:configuration>

@@ -1,0 +1,6 @@
+sequence,class
+"<IMG SRC=j&#X41vascript:alert('test2')>",abnormal
+"1=1",abnormal
+"SELECT uid FROM Users WHERE name = 'Dupont'; -- ' AND password = '4e383a1918b432a9bb7702f086c56596e';",abnormal
+"SELECT uid FROM Users WHERE name = 'Dupont' AND password = '' or 1 --';",abnormal
+"<script>window.onload = function() {var link=document.getElementsByTagName('a');link[0].href='http://not-real-xssattackexamples.com/';}</script>",abnormal

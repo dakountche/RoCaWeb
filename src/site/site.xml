@@ -1,0 +1,47 @@
+<project name="RoCaWeb">
+   <publishDate position="right"/>
+   
+  <version position="right"/>
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.4</version>
+  </skin>
+  
+    <bannerLeft>
+    <name>RoCaWeB</name>
+    <href>http://dali.kereval.com/</href>
+  </bannerLeft>
+
+  
+  <body>
+    
+    <menu name="Overview">
+      <item name="Description" href="project-summary.html" />
+      <item name="Licence" href="license.html" />
+      <item name="Modules" href="modules.html"/>	
+    </menu>
+   
+   
+    <menu name="Get RoCaWeb">
+       <item name="Download" href="http://ftp.kereval.com" />
+       <item name="Bugtrack" href="issue-tracking.html" />
+    </menu>
+   
+    
+    <menu name="Documentation">
+       <item name="User Guide" href=""/>
+       <item name="Publications" href=""/>
+       <item name="FAQ" href="" />
+    </menu>
+   
+     <menu name="project Team">
+       <item name="Télécom Bretagne" href=""/>
+       <item name="Kereval" href=""/>
+       <item name="DGA" href=""/>
+       <item name= "Mailing list" href="mail-lists.html"/>
+    </menu> 
+    
+  </body>
+  
+</project>

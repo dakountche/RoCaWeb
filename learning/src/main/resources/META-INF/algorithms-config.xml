@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithms>
+<input>
+   <learningPath>learningDir</learningPath>
+   <learningFileName>fileName</learningFileName>
+   <clustering>false</clustering>
+   <decode>false</decode>
+   <casse>false</casse>
+   <clean>false</clean>
+   <base>utf-8</base>
+   <clusterNumber>1</clusterNumber>
+   <ruleType>ModSecurity</ruleType>
+   
+   <mahout></mahout>
+</input>
+
+
+ <pair-alignment>
+   <penalty>-1</penalty>
+   <match>1</match>
+   <mismatch>0</mismatch>
+   <gapCharacter>¤</gapCharacter>
+   <functionName>Complete</functionName>
+ </pair-alignment>
+ 
+
+  <amaa>
+    <sub-algorithm>
+       <name>com.rocaweb.learning.algorithms.alignment.pair.NeedlemanWunsch</name>
+       <default-config>true</default-config>
+   </sub-algorithm>
+  </amaa>
+
+
+
+<typing>
+   <bounded>false</bounded>
+</typing>
+
+
+<attributeLentgth>
+  <threshold>0.10</threshold>
+</attributeLentgth>
+
+
+<attributeCharacterDistribution>
+	<icd></icd>
+</attributeCharacterDistribution>
+
+<crossvalidation>
+  <k>5</k>
+  <ratio>0.8</ratio>
+  <shuffle>false</shuffle>
+ 
+  
+<sub-algorithm>
+  <name>com.rocaweb.learning.algorithms.alignment.multipleSequence.AMAA</name>
+  <default-config>true</default-config>
+</sub-algorithm>
+
+<sub-algorithm>
+  <name>com.rocaweb.learning.algorithms.typing.RegexLearner</name>
+  <default-config>true</default-config>
+
+</sub-algorithm>
+
+</crossvalidation>
+
+<evaluation>
+<random></random>
+<cvsFilePath></cvsFilePath>
+<reporting>
+<format></format>
+<saving></saving>
+</reporting>
+
+</evaluation>
+
+</algorithms>

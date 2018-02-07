@@ -1,0 +1,76 @@
+{
+		"learningFileName": "ftp://ftp.lip6.fr/pub/linux/sunsite/NEW",
+		"clustering": false,
+		"decode": false,
+		"casse": false,
+		"clean": false,
+		"base": "utf-8",
+		"clusterNumber": 0,
+		"ruleType": "ModSecurity",
+		"learningPath": "ftp://ftp.lip6.fr/pub/",
+		"configFileName": "META-INF/algorithms-config.xml",
+		"k": 10,
+		"shuffle": false,
+		"ratio": 0.8,
+		"mahout":"",
+		"algorithms": 
+		[
+			{
+				"com.rocaweb.learning.algorithms.alignment.multipleSequence.AMAA": 
+				{
+					"pairAlignmentAlgorithm": 
+					{
+						"penalty": -1.0,
+						"mismatch": 0.0,
+						"match": 1.0,
+						"alphabet": 
+						[
+							
+						],
+
+						"gapCharacter": "¤",
+						"possibleGapCharacters": 
+						[
+							"¤",
+							"&",
+							"£",
+							"§"
+						],
+
+						"functionName": "Complete"
+					},
+
+					"isLibraryAligned": false,
+					"learningFileName": "fileName",
+					"clustering": false,
+					"decode": false,
+					"casse": false,
+					"clean": false,
+					"base": "utf-8",
+					"clusterNumber": 0,
+					"ruleType": "ms",
+					"learningPath": "ftp://ftp.lip6.fr/pub/",
+					"configFileName": "META-INF/algorithms-config.xml",
+					"mahout": ""
+				}
+			},
+
+			{
+				"com.rocaweb.learning.algorithms.typing.RegexLearner": 
+				{
+					"bounded": false,
+					"clustering": false,
+					"decode": false,
+					"casse": false,
+					"clean": false,
+					"base": "utf-8",
+					"clusterNumber": 0,
+					"ruleType": "ms",
+					"learningPath": "ftp://ftp.lip6.fr/pub/",
+					"configFileName": "META-INF/algorithms-config.xml",
+					"learningFileName": "fileName",
+					"mahout": ""
+				}
+			}
+		]
+	}

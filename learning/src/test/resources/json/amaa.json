@@ -1,0 +1,38 @@
+{
+	"pairAlignmentAlgorithm": 
+	{
+		
+			"penalty": -2.0,
+			"mismatch": -1.0,
+			"match": 1.0,
+			"alphabet": 
+			[
+				
+			],
+
+			"gapCharacter": "¤",
+			"possibleGapCharacters": 
+			[
+				"¤",
+				"&",
+				"£",
+				"§"
+			],
+
+			"functionName": "Complete"
+		
+	},
+
+	"isLibraryAligned": false,
+	"learningFileName": "fileName",
+	"clustering": false,
+	"decode": false,
+	"casse": false,
+	"clean": false,
+	"base": "utf-8",
+	"clusterNumber": 1,
+	"ruleType": "ModSecurity",
+	"learningPath": "learningDir",
+	"configFileName": "META-INF/algorithms-config.xml",
+	"mahout": ""
+}
