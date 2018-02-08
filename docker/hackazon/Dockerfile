@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM debian:latest
 MAINTAINER Djibrilla AMADOU KOUNTCHE <djibrilla.amadoukountche@gmail.com> 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y && DEBIAN_FRONTEND=noninteractive  apt-get install -y \
                                    apache2 \
