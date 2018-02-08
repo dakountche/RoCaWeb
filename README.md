@@ -3,7 +3,7 @@
 ## Introduction
 
 RoCaWeb was a project between IMT-Atlantique (then Télécom-Bretagne) and [Keraval](http://kereval.com).
-It was funded with grant called RAPID (régime d’appui à l’innovation duale). The project leads to the development of the software name RoCaWeb.
+It was funded by a grant called RAPID (régime d’appui à l’innovation duale). The project leads to the development of the software name RoCaWeb.
 
 RoCaWeb is the descendant of other projects launch to study the application
 of the notion of smart contract to Web application protection.
@@ -14,12 +14,12 @@ These projects are:
 
 ## Web application Firewall
 
-As defined by OWASP: "A web application Firewall (WAF) is an application Firewall for HTTP applications.
-It applies a set of rules to an HTTP conversation. Generally, these rules cover common attacks such as cross-site scripting (XSS) and SQL injection."
-On such application is ModSecurity. A WAF can be deploy as reserve proxy to filter all the traffic. It can also function as:
+As defined by [OWASP](https://www.owasp.org/index.php/Main_Page): "A web application Firewall (WAF) is an application Firewall for HTTP applications. It applies a set of rules to an HTTP conversation. Generally, these rules cover common attacks such as cross-site scripting (XSS) and SQL injection."
+One such application is ModSecurity. A WAF can be deploy as reserve proxy to filter all the traffic in both direction. It can also function as:
 
-    - passive mode also known as IDS
-    - active mode also known as IPS
+    - passive mode also known as IDS (Intrusion detection System)
+    - active mode also known as IPS  (Intrusion Prevention System)
+    - combination of the two modes as an IDPS
 
 
 
@@ -30,7 +30,7 @@ RoCaWeb is composed by three modules:
     - Learning
     - Web User Interface
     - Agent
-An illustration of RoCaWeb protecting Hackazon is swhon on the figure below. 
+An illustration of RoCaWeb protecting Hackazon is given by the figure below. 
 
 ![RoCaWeb protecting Hackazon](./documentation/images/rocaweb-archi.png)
 
@@ -41,15 +41,16 @@ The RoCaWeb Learning module is illustrated on the following figure:
 
 ### Data sets used for the learning process
 An important remark is that: We are assuming that the data sets used for the learning 
-process describe the ** normal behavior ** of the application. 
+process describe the **normal behavior** of the application.  Also no learning is made when the  application is on 
+*production mode*.
 These data can be obtained using:
 
-    - Wireshark to capture a normal traffic and then export it as a PDML
+    - Wireshark, for example during functional tests, to capture a normal traffic and then export it as a PDML
     - the ELK stack (provided in a beta version). 
 Other data sources can be also implemented. 
 
 ### Algorithms implemented
-The learning component is composed by the following algorithms: 
+The learning module is composed by the following algorithms: 
 
 - Bio-informatic algorithms:
     - AMAA (Another Multiple sequence Alignment Algorithm). This algorithm was developed during this project. 
@@ -76,11 +77,12 @@ The learning component is composed by the following algorithms:
 
 
 These algorithms are implemented  in Java when a suitable version from a library is not used.
-
+Also, for each algorithm a validation version needs to be implemented in Lua for ModSecurity.
+This allows to extend ModSecurity to support other types of rules than the regular expression. 
 
 
 ## Web User Interface
-RoCaWeb offers a user interface developed using the Play Framework.
+RoCaWeb offers a user interface developed using the [Play Framework](https://www.playframework.com/).
 It allows the configuration of all the learning process and also the state of the rules.
 
 ### Generating firewall rules with Webui
@@ -91,8 +93,8 @@ the sources block, we are going to import the PDML file, by clicking on the impo
 
 ![Importing PDML](./documentation/images/import.png)
 
-Once the file is uploaded, it should appear in the sources window. We then need to clusterize the data:
-to do so, we need to select the file in the sources window and click on the clusterize button:
+Once the file is uploaded, it should appear in the sources window. We then need to cluster the data:
+to do so, we need to select the file in the sources window and click on the 'clusterize' button:
 ![Clusterize](./documentation/images/clusterize.png)
 
 Once the data is ready, it should appear in the preprocessed block:
@@ -126,7 +128,6 @@ The detection phase is illustrated on the figure below.
 ![RoCaWeb detection phase](./documentation/images/detection.png)
 
 
-
 # Installation 
 
 ## Using Docker
@@ -149,11 +150,13 @@ This will launch the:
 
    - ELK stack
    
-      - Elasticsearch
-      - Logstash 
+      - Elasticsearch: http://localhost:9200/_cat/indices?v
+      - Logstash
       - Kibana is accessible at http://localhost:5601
      
-
+   - The status of the agent is given at:
+   
+       - http://localhost/server-status
 
 ## From this Git repository
 After installing the dependencies, downloading this repository from Github by:
