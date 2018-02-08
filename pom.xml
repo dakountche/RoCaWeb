@@ -44,7 +44,6 @@
 		<developer>
 			<id>dakountche</id>
 			<name>Djibrilla Amadou Kountche</name>
-			<email>djibrilla.amadoukountche@gmail.com</email>
 			<roles>
 				<role>Postdoctoral Researcher</role>
 				<role>developer</role>
@@ -55,7 +54,6 @@
 
 		<developer>
 			<name>Sylvain Gombault</name>
-			<email>sylvain.gombault@imt-atlantique.fr</email>
 			<roles>
 				<role>Professor</role>
 				<role>developer</role>
@@ -407,4 +405,12 @@
 		</profile>
 	</profiles>
 
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/dakountche/RoCaWeb/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/damadouk/RoCaWeb</url>
+	</ciManagement>
 </project>
