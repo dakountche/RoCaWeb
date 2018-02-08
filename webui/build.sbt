@@ -16,9 +16,3 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2
 libraryDependencies += "com.rocaweb" % "commons" % "1.0.0-SNAPSHOT"
 libraryDependencies += "com.rocaweb" % "learning" % "1.0.0-SNAPSHOT"
 libraryDependencies += "com.google.code.gson" % "gson" % "2.5"
-
-// Adds additional packages into Twirl
-//TwirlKeys.templateImports += "com.rocaweb.ui.controllers._"
-
-// Adds additional packages into conf/routes
-// play.sbt.routes.RoutesKeys.routesImport += "com.rocaweb.binders._"
