@@ -67,8 +67,8 @@ services:
         - private
       links:
         - hackazon
-      
-      
+
+
     agent-webgoat:
       build: ./agent
       image: agent
@@ -100,7 +100,9 @@ services:
         - ./webui/conf:/opt/rocaweb-web-user-interface-0.1-SNAPSHOT/conf
       networks:
        - public
-   
+      links:
+        - kibana
+
 
     hackazon:
       build: ./hackazon
