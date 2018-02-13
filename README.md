@@ -1,18 +1,30 @@
 # RoCaWeb (Reverse Proxy based on Contract for Web protection)
 
-## Introduction
+* [Introduction](#introduction)
+* [Web Application Firewall](#waf)
+* [Approach of the RoCaWeb Project](#approach)
+  * [Learning](#learning)
+  * [Datasets](#datasets)
+  * [Algorithms](#algos)
+* [Web UI](#webui)
+* [Agent](#agent)
+* [Installation](#installation)
+* [Contribution](#contribution)
+* [Documentation](#doc)
+
+
+## <a name="introduction"></a> Introduction
 
 RoCaWeb was a project between IMT-Atlantique (then Télécom-Bretagne) and [Keraval](http://kereval.com).
-It was funded by a grant called RAPID (régime d’appui à l’innovation duale). The project leads to the development of the software name RoCaWeb.
+It was funded by a grant called RAPID (régime d’appui à l’innovation duale). The project leads to the development of the software named RoCaWeb.
 
-RoCaWeb is the descendant of other projects launch to study the application
-of the notion of smart contract to Web application protection.
+RoCaWeb is the descendant of other projects launch to study the application of the notion of smart contract to Web application protection.
 These projects are:
   - [DALI](http://dali.kereval.com/)
   - DIDON
  
 
-## Web application Firewall
+## <a name="waf"></a> Web application Firewall
 
 As defined by [OWASP](https://www.owasp.org/index.php/Main_Page): "A web application Firewall (WAF) is an application Firewall for HTTP applications. It applies a set of rules to an HTTP conversation. Generally, these rules cover common attacks such as cross-site scripting (XSS) and SQL injection."
 One such application is ModSecurity. A WAF can be deploy as reserve proxy to filter all the traffic in both direction. It can also function as:
@@ -23,7 +35,7 @@ One such application is ModSecurity. A WAF can be deploy as reserve proxy to fil
 
 
 
-## The chosen approach in the RoCaWeb project
+## <a name="approach"></a> The chosen approach in the RoCaWeb project
 
 RoCaWeb is composed by three modules: 
 
@@ -34,12 +46,12 @@ An illustration of RoCaWeb protecting Hackazon is given by the figure below.
 
 ![RoCaWeb protecting Hackazon](./documentation/images/rocaweb-archi.png)
 
-### Learning
+### <a name="learning"></a> Learning
 
 The RoCaWeb Learning module is illustrated on the following figure:
 ![RoCaWeb Learning process](./documentation/images/learning.png)
 
-### Data sets used for the learning process
+### <a name="datasets"></a> Data sets used for the learning process
 An important remark is that: We are assuming that the data sets used for the learning 
 process describe the **normal behavior** of the application.  Also no learning is made when the  application is on 
 *production mode*.
@@ -49,7 +61,7 @@ These data can be obtained using:
     - the ELK stack (provided in a beta version). 
 Other data sources can be also implemented. 
 
-### Algorithms implemented
+### <a name="algos"></a> Algorithms implemented
 The learning module is composed by the following algorithms: 
 
 - Bio-informatic algorithms:
@@ -81,12 +93,12 @@ Also, for each algorithm a validation version needs to be implemented in Lua for
 This allows to extend ModSecurity to support other types of rules than the regular expression. 
 
 
-## Web User Interface
+### <a name="webui"></a> Web User Interface
 RoCaWeb offers a user interface developed using the [Play Framework](https://www.playframework.com/).
 It allows the configuration of all the learning process and also the state of the rules.
 
-### Generating firewall rules with Webui
-We are now going to import the PDML file using Webui and then generate the firewall rules. Webui
+#### Generating firewall rules with Webui
+Now, here's how to import the PDML file using Webui and then generate the firewall rules. Webui
 can be accessed by connecting to http://localhost:9001 in a browser.
 The Data page should be displayed, with three main blocks: sources, preprocessed, visualization. In
 the sources block, we are going to import the PDML file, by clicking on the import icon.
@@ -99,38 +111,35 @@ to do so, we need to select the file in the sources window and click on the 'clu
 
 Once the data is ready, it should appear in the preprocessed block:
 
-![Preprocessing](./documentation/images/prepocessed.png)
+![Preprocessing](./documentation/images/preprocessed.png)
 
 We can now move on to the Learning page. We should see localhost in the data block. To visualize it,
 we are going to select localhost and click on the visualization button:
 
 ![Visualize](./documentation/images/visualize.png)
 
-We should now be able to see the details of our data in the visualization block. We are going to generate
-a ModSecurity rule for the first_name parameter. So we can select /user/register/POST/first_name,
-then the AMAA algorithm. Then let’s generate the rule by clicking on the Run button. In the running
-block, we should see the information of what job is running. Once it is finished, the running block
-should look like this (green border):
+We should now be able to see the details of our data in the visualization block. 
+To create a rule for a given node, we can select it (```/path/to/node```) and generate the rule by clicking on the Run button. <br/>
+In the running block, we should see the information of what job is running. Once it is finished, the running block should look like this (green border):
 
 ![Learning](./documentation/images/learnwebui.png)
 
 
 Once the job is finished, we can go to the Profiles page to download the rule. To do so, we just need
 to select it and click on the import button. It is downloaded as a text file (.txt), so we will need to
-change it to a .conf file by renaming it hackazon-first-name-amaa.conf (the name does
-not really matter, the file just needs to be .conf).
+change it to a .conf file by renaming it name-of-the-rule.conf.
 
 
-## Agent
+### <a name="agent"></a> Agent
 
 The agent is composed by ModSecurity, Torch7 and OSBF-Lua to provide the reverse-proxy.
 The detection phase is illustrated on the figure below. 
 ![RoCaWeb detection phase](./documentation/images/detection.png)
 
 
-# Installation 
+## <a name="installation"></a> Installation 
 
-## Using Docker
+### Using Docker
 
 After downloading this repository, change to the docker directory and type
 
@@ -158,7 +167,7 @@ This will launch the:
    
        - http://localhost/server-status
 
-## From this Git repository
+### From this Git repository
 After installing the dependencies, downloading this repository from Github by:
 
 ```bash
@@ -193,15 +202,15 @@ $sbt run
 This command will launch the web user interface. 
 
 
-# Contributing to this project
+## <a name="contribution"></a> Contributing to this project
 RoCaWeb is still under development. And your contribution is welcome. 
 
 
-# RoCaWeb Documentation
+## <a name="doc"></a> RoCaWeb Documentation
 
-This documentation folder is divided into three subfolders: papers, presentations and reports.
+This ```./documentation``` folder is divided into three subfolders: papers, presentations and reports.
 
-## Papers
+### Papers
 
 **Specification-based intrusion detection using Sequence alignment and Data clustering**
 * Authors: Djibrilla Amadou Kountche, Sylvain Gombault
@@ -210,7 +219,7 @@ This documentation folder is divided into three subfolders: papers, presentation
 * Abstract: In this paper, we present our work on specification-based intrusion detection. Our goal is to build a web application firewall which is able to learn the normal behavior of an application (and/or the user) from the traffic between a client and a server.
 * Format: PDF, LaTeX
 
-## Presentations
+### Presentations
 
 **Specification-based intrusion detection using Sequence alignment and Data clustering**
 * Authors: Djibrilla Amadou Kountche, Sylvain Gombault
@@ -226,7 +235,7 @@ This documentation folder is divided into three subfolders: papers, presentation
 * Abstract: 
 * Format: PDF, LaTeX
 
-## Reports
+### Reports
 
 **Manuel d'utilisation de RoCaWeb**
 * Author: Team RoCaWeb
