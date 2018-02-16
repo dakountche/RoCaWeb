@@ -172,7 +172,7 @@ local function validate(param)
   local khi, dist, p_value = khi2(observed,expected)
 
   if (khi > dist) then
-     m.log(1, "\nkhi= "..khi .."\ndist= "..dist .."\n p-value ="..p_value .."\nlen = "..string.len(params[i].value)..  "\n icd= " .. printTable(getICD()) .. "\nobserved=  " .. printTable(observed) .. "\n expected : " .. printTable(expected))
+     m.log(1, "\nkhi= "..khi .."\ndist= "..dist .."\n p-value ="..p_value .."\nlen = "..string.len(param.value)..  "\n icd= " .. printTable(getICD()) .. "\nobserved=  " .. printTable(observed) .. "\n expected : " .. printTable(expected))
      msg = msg .. param.name .." " .. param.value
      m.log(3, param.name..','..param.value..','..'1')
   else
@@ -205,7 +205,7 @@ function main()
     for i = 1,#params do
 
       if(params[i].name == "ARGS:"..name) then
-          validate(param[i])
+          validate(params[i])
           break
     end
     end
