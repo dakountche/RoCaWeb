@@ -86,7 +86,7 @@ public final class IdealisedCharacterDistribution extends AbstractDistribution {
 	}
 
 	/**
-	 * Realises the test as describe by {@see Kruegel et al.}
+	 * Realizes the test as describe by {@see Kruegel et al.}
 	 * 
 	 * @param observedValue
 	 *            the sequence to test
