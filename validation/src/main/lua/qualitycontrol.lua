@@ -52,7 +52,7 @@ end
 --
 local function validate(param)
   if math.abs(string.len(param.value) - mean) > 3*std then
-     message = message .. " " .. params[i].name .. " "..param.value "\n"
+     message = message .. " " .. param.name .. " "..param.value "\n"
      m.log(2, param.name..','..param.value..','..'0')
 
   else
