@@ -70,7 +70,6 @@ public class TokenFinder extends AbstractGrammaticalAlgorithm<List<String>> {
 		}
 		logger.trace(print(fFunstion));
 		logger.trace(print(gFunction));
-
 	}
 
 	/**
@@ -142,5 +141,9 @@ public class TokenFinder extends AbstractGrammaticalAlgorithm<List<String>> {
 			contract = new Tokens(this);
 		}
 		return contract;
+	}
+	
+	public char getFormatChar() {
+		return 's';
 	}
 }
