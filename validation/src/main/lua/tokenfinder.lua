@@ -32,7 +32,7 @@ local tokens = {}
 -- Fill the tokens from the activated rule
 local function initialize() 
    local i = 0
-   while (m.getvar("TX.token"..i) do
+   while (m.getvar("TX.token"..i)) do
        tokens[i+1] = m.getvar("TX.token"..i
        i = i + 1
    end
@@ -50,6 +50,7 @@ local function validate(param)
      else
         m.log(2, param.name..','..param.value..','..'1')
         message = nil
+     end
 end
 
 
@@ -65,7 +66,7 @@ function main()
       if(params[i].name == "ARGS:"..name) then
           validate(params[i])
           break
-    end
+      end
     end
     return msg
 end
