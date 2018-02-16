@@ -225,11 +225,14 @@ public class Utils {
 		
 	}
 
-	public static String listToString(List<String> elements) {
-		return Joiner.on(System.getProperty("line.separator")).useForNull("").join(elements);
+	public static String listToString(List<String> elements, String separator) {
+		return Joiner.on(separator).useForNull("").join(elements);
 	}
 
-
+    
+	public static String listToString(List<String> elements) {
+		return listToString(elements, System.getProperty("line.separator"));
+	}
 	
     /**
      * Determines the absolute Path of a file
