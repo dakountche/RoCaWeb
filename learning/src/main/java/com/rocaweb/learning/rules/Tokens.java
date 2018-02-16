@@ -38,8 +38,16 @@ public final class Tokens extends Contract<List<String>> {
 		super(tokenFinder);
 	}
 
-	public String generateRule() {
-		return nonFormatedContract();
+	public String createRule(List<String> tokens) {
+		if(tokens == null || tokens.isEmpty())
+			return "";
+		int i = 0;
+		StringBuilder result = new StringBuilder();
+		for (String token: tokens)
+			result.append(String.format("token%d=%s,", i++, token));
+		return result.toString();
 	}
+	
+	
 
 }
