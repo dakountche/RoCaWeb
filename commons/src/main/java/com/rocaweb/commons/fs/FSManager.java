@@ -17,6 +17,7 @@
 
 package com.rocaweb.commons.fs;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URL;
@@ -232,7 +233,8 @@ public final class FSManager {
 	public static synchronized FileObject resolveFile(String fileName) {
 		FileObject fo = null;
 		try {
-			fo = FSManager.getManager().resolveFile(fileName);
+			File file = new File(fileName);
+			fo = FSManager.getManager().resolveFile(file.getAbsolutePath());
 		} catch (FileSystemException e) {
 			logger.error(e.getMessage(), e);
 		}
