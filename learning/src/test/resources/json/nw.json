@@ -8,7 +8,7 @@
 			
 		],
 
-		"gapCharacter": "¤",
+		"gapCharacter": "-",
 		"possibleGapCharacters": 
 		[
 			"¤",
@@ -21,7 +21,7 @@
 		"learningFileName": "fileName",
 		"clustering": false,
 		"decode": false,
-		"casse": false,
+		"casse": true,
 		"clean": false,
 		"base": "utf-8",
 		"clusterNumber": 1,

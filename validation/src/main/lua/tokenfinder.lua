@@ -57,7 +57,6 @@ end
 -- ModSecurity entry point
 function main()
 
-   local msg="";
    local params = m.getvars("ARGS",  { "lowercase", "htmlEntityDecode" })
    local name = m.getvar("TX.name")
 
@@ -68,5 +67,5 @@ function main()
           break
       end
     end
-    return msg
+    return message
 end
