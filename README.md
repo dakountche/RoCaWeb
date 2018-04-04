@@ -6,8 +6,8 @@
   * [Learning](#learning)
   * [Datasets](#datasets)
   * [Algorithms](#algos)
-* [Web UI](#webui)
-* [Agent](#agent)
+  * [Web UI](#webui)
+  * [Agent](#agent)
 * [Installation](#installation)
 * [Contribution](#contribution)
 * [Documentation](#doc)
@@ -20,29 +20,31 @@ It was funded by a grant called RAPID (régime d’appui à l’innovation duale
 
 RoCaWeb is the descendant of other projects launch to study the application of the notion of smart contract to Web application protection.
 These projects are:
-  - [DALI](http://dali.kereval.com/)
-  - DIDON
- 
+
+- [DALI](http://dali.kereval.com/)
+- DIDON
+
 
 ## <a name="waf"></a> Web application Firewall
 
 As defined by [OWASP](https://www.owasp.org/index.php/Main_Page): "A web application Firewall (WAF) is an application Firewall for HTTP applications. It applies a set of rules to an HTTP conversation. Generally, these rules cover common attacks such as cross-site scripting (XSS) and SQL injection."
 One such application is ModSecurity. A WAF can be deploy as reserve proxy to filter all the traffic in both direction. It can also function as:
 
-    - passive mode also known as IDS (Intrusion detection System)
-    - active mode also known as IPS  (Intrusion Prevention System)
-    - combination of the two modes as an IDPS
+- passive mode also known as IDS (Intrusion detection System)
+- active mode also known as IPS  (Intrusion Prevention System)
+- combination of the two modes as an IDPS
 
 
 
 ## <a name="approach"></a> The chosen approach in the RoCaWeb project
 
-RoCaWeb is composed by three modules: 
+RoCaWeb is composed by three modules:
 
-    - Learning
-    - Web User Interface
-    - Agent
-An illustration of RoCaWeb protecting Hackazon is given by the figure below. 
+- Learning
+- Web User Interface
+- Agent
+
+An illustration of RoCaWeb protecting Hackazon is given by the figure below.
 
 ![RoCaWeb protecting Hackazon](./documentation/images/rocaweb-archi.png)
 
@@ -52,20 +54,21 @@ The RoCaWeb Learning module is illustrated on the following figure:
 ![RoCaWeb Learning process](./documentation/images/learning.png)
 
 ### <a name="datasets"></a> Data sets used for the learning process
-An important remark is that: We are assuming that the data sets used for the learning 
-process describe the **normal behavior** of the application.  Also no learning is made when the  application is on 
+An important remark is that: We are assuming that the data sets used for the learning
+process describe the **normal behavior** of the application.  Also no learning is made when the  application is on
 *production mode*.
 These data can be obtained using:
 
-    - Wireshark, for example during functional tests, to capture a normal traffic and then export it as a PDML
-    - the ELK stack (provided in a beta version). 
-Other data sources can be also implemented. 
+- Wireshark, for example during functional tests, to capture a normal traffic and then export it as a PDML
+- the ELK stack (provided in a beta version).
+
+Other data sources can be also implemented.
 
 ### <a name="algos"></a> Algorithms implemented
-The learning module is composed by the following algorithms: 
+The learning module is composed by the following algorithms:
 
 - Bio-informatic algorithms:
-    - AMAA (Another Multiple sequence Alignment Algorithm). This algorithm was developed during this project. 
+    - AMAA (Another Multiple sequence Alignment Algorithm). This algorithm was developed during this project.
     - CSR (Contiguous Substring Reward)
     - Needleman-Wunsch
     - Smith-Waterman
@@ -76,21 +79,21 @@ The learning module is composed by the following algorithms:
     - Probabilistic grammar inference
 
 
-- Statistical algorithms
+- Statistical algorithms:
     - Chebychev test
     - Chi-squarre
     - etc.
-  
-- Machine learning
+
+- Machine learning:
     - Naive Bayesian
     - Once class SVM
     - Decision trees
     - etc.
 
 
-These algorithms are implemented  in Java when a suitable version from a library is not used.
+These algorithms are implemented in Java when a suitable version from a library is not used.
 Also, for each algorithm a validation version needs to be implemented in Lua for ModSecurity.
-This allows to extend ModSecurity to support other types of rules than the regular expression. 
+This allows to extend ModSecurity to support other types of rules than the regular expression.
 
 
 ### <a name="webui"></a> Web User Interface
@@ -118,8 +121,8 @@ we are going to select localhost and click on the visualization button:
 
 ![Visualize](./documentation/images/visualize.png)
 
-We should now be able to see the details of our data in the visualization block. 
-To create a rule for a given node, we can select it (```/path/to/node```) and generate the rule by clicking on the Run button. <br/>
+We should now be able to see the details of our data in the visualization block.
+To create a rule for a given node, we can select it (`/path/to/node`) and generate the rule by clicking on the Run button.<br/>
 In the running block, we should see the information of what job is running. Once it is finished, the running block should look like this (green border):
 
 ![Learning](./documentation/images/learnwebui.png)
@@ -133,11 +136,12 @@ change it to a .conf file by renaming it name-of-the-rule.conf.
 ### <a name="agent"></a> Agent
 
 The agent is composed by ModSecurity, Torch7 and OSBF-Lua to provide the reverse-proxy.
-The detection phase is illustrated on the figure below. 
+The detection phase is illustrated on the figure below.
+
 ![RoCaWeb detection phase](./documentation/images/detection.png)
 
 
-## <a name="installation"></a> Installation 
+## <a name="installation"></a> Installation
 
 ### Using Docker
 
@@ -149,25 +153,19 @@ docker-compose up
 
 This will launch the:
 
-   - web user interface available at http://localhost:9001
-
-   - hackazon vulnerable web site at http://localhost
-   
-   - Webgoat available at http://localhost:8080/WebGoat
-
-   - two instances of the  agent (Apache/Modsecurity/Torch/OSBFLua) for Hackzon and Webgoat. Each functioning as a separate reverse proxy. 
-
-   - ELK stack
-   
-      - Elasticsearch: http://localhost:9200/_cat/indices?v
-      - Logstash
-      - Kibana is accessible at http://localhost:5601
-     
-   - The status of the agent is given at:
-   
-       - http://localhost/server-status
+- web user interface available at http://localhost:9001
+- Hackazon vulnerable web site at http://localhost
+- Webgoat available at http://localhost:8080/WebGoat
+- two instances of the  agent (Apache/Modsecurity/Torch/OSBFLua) for Hackzon and Webgoat. Each functioning as a separate reverse proxy.
+- ELK stack
+    - Elasticsearch: http://localhost:9200/\_cat/indices?v
+    - Logstash
+    - Kibana is accessible at http://localhost:5601
+- The status of the agent is given at:
+    - http://localhost/server-status
 
 ### From this Git repository
+
 After installing the dependencies, downloading this repository from Github by:
 
 ```bash
@@ -188,34 +186,35 @@ $ git clone https://github.com/dakountche/RoCaWeb.git rocaweb
 ```bash
 $ export SBT_OPTS="${SBT_OPTS} -Dsbt.jse.engineType=Node -Dsbt.jse.command=$(which node)"
 ```
-   
+
 ```bash
 $ mvn clean install -DskipTests
 ```
-We are skipping the tests from now. 
+We are skipping the tests from now.
 
 - Change to the webui folder and type:
 
 ```bash
-$sbt run
+$ sbt run
 ```
-This command will launch the web user interface. 
+
+This command will launch the web user interface.
 
 
 ## <a name="contribution"></a> Contributing to this project
-RoCaWeb is still under development. And your contribution is welcome. 
+RoCaWeb is still under development. And your contribution is welcome.
 
 
 ## <a name="doc"></a> RoCaWeb Documentation
 
-This ```./documentation``` folder is divided into three subfolders: papers, presentations and reports.
+The `./documentation` folder is divided into three subfolders: papers, presentations and reports.
 
 ### Papers
 
 **Specification-based intrusion detection using Sequence alignment and Data clustering**
 * Authors: Djibrilla Amadou Kountche, Sylvain Gombault
 * Language: English
-* Location: ```./documentation/papers/writen/fnss2015/```
+* Location: `./documentation/papers/writen/fnss2015/`
 * Abstract: In this paper, we present our work on specification-based intrusion detection. Our goal is to build a web application firewall which is able to learn the normal behavior of an application (and/or the user) from the traffic between a client and a server.
 * Format: PDF, LaTeX
 
@@ -224,15 +223,15 @@ This ```./documentation``` folder is divided into three subfolders: papers, pres
 **Specification-based intrusion detection using Sequence alignment and Data clustering**
 * Authors: Djibrilla Amadou Kountche, Sylvain Gombault
 * Language: English
-* Location: ```./documentation/presentations/fnss2015/```
-* Abstract: 
+* Location: `./documentation/presentations/fnss2015/`
+* Abstract:
 * Format: PDF, LaTeX
 
 **RoCaWeb: Choix algorithmiques et Questions d'implémentation**
 * Author: Djibrilla Amadou Kountche
 * Language: French
-* Location: ```./documentation/presentations/jr2015/``` 
-* Abstract: 
+* Location: `./documentation/presentations/jr2015/`
+* Abstract:
 * Format: PDF, LaTeX
 
 ### Reports
@@ -240,7 +239,6 @@ This ```./documentation``` folder is divided into three subfolders: papers, pres
 **Manuel d'utilisation de RoCaWeb**
 * Author: Team RoCaWeb
 * Language: French
-* Location: ```./documentation/reports/userGuide/```
-* Abstract: Dans ce petit guide, nous allons expliquer le fonctionnement de la version courante de Rocaweb. Nous informons dès à présent le lecteur que RoCaWeb est toujours en développement. Il est à la version 3 sur quatre  prévues. 
+* Location: `./documentation/reports/userGuide/`
+* Abstract: Dans ce petit guide, nous allons expliquer le fonctionnement de la version courante de Rocaweb. Nous informons dès à présent le lecteur que RoCaWeb est toujours en développement. Il est à la version 3 sur quatre  prévues.
 * Format: LaTeX
-
